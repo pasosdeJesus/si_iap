@@ -1,0 +1,69 @@
+
+es:
+  attributes:
+    fechadeshabilitacion: Fecha de deshabilitación
+    fechacreacion: Fecha de creación
+    proyecto: Aspecto Programático
+    proyectos: Aspectos Programáticos
+  activerecord:
+    attributes:
+      "cor1440_gen/actividad":
+        actividadpf: Actividad de marco lógico
+        poblacion_hombres_r: Población hombres
+        poblacion_mujeres_r: Población mujeres
+        poblacion_sinsexo: Otros
+        proyecto: Aspecto Programático
+      "cor1440_gen/proyecto":
+        Proyecto: Aspecto Programático
+        Proyectos: Aspectos Programáticos
+      "cor1440_gen/proyectofinanciero":
+        fechaaprobacion: "Fecha de aprobación"
+        fechaaprobacion_localizada: "Fecha de aprobación"
+        fechaliquidacion: "Fecha de liquidación"
+        fechaformulacion: "Fecha de formulación"
+        fechaformulacion_anio: "Año de formulación"
+        fechaformulacion_mes: "Mes de formulación"
+        fechaformulacion_localizada: "Fecha de formulación"
+        fechaliquidacion: "Fecha de liquidación"
+        fechaliquidacion_localizada: "Fecha de liquidación"
+        proyecto: Aspecto Programático
+        proyectos: Aspectos Programáticos
+        proyecto_ids: Aspectos Programáticos
+        "{:proyecto_ids=>[]}": Aspectos Programáticos
+      "cor1440_gen/pmindicadorpf":
+        resind: Avance
+      "estadozrc":
+        Estadozrc: Estado de ZRC
+        Estadoszrc: Estados de ZRC
+      "estadoobs":
+        Estadoobs: Estado de observación
+        Estadosobs: Estados de observación
+      "nivelorganzorc": 
+        Nivelorganzorc: Nivel de organización
+        Nivelesorganzorc: Niveles de organización
+      "nodo":
+        Nodo: Nodo
+        Nodos: Nodos
+      "sip/actorsocial":
+        Actorsocial: Organización
+        Actoressociales: Organizaciones
+        nit: Nit
+        numasociados: Número de asociados (hombres)
+        numasociadas: Número de asociadas (mujeres)
+        carpeta: Carpeta en nube
+        nivelorganzorc: Nivel de organización
+        tipoorganzorc: Tipo de organización
+        "{:actorsocial persona=>[]}": Contactos
+      "tipoorganzorc": 
+        Tipoorganzorc: Tipo de organización
+        Tiposorganzorc: Tipos de organización
+      "usuario":
+        tdocumento: Tipo de documento
+        numerodocumento: Número de documento
+      "zrc":
+        Zrc: ZRC
+        Zrcs: ZRCs
+        estadozrc: Estado de ZRC
+        fresolucion: Fecha de Resolución
+        nresolucion: Número de Resolución
+

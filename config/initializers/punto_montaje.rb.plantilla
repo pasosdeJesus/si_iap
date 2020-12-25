@@ -1,0 +1,2 @@
+SiIap::Application.config.relative_url_root = '/iap/si'
+SiIap::Application.config.assets.prefix = '/iap/si/assets'
