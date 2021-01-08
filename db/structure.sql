@@ -1581,7 +1581,7 @@ CREATE TABLE public.cor1440_gen_proyectofinanciero (
     compromisos character varying(5000),
     monto integer,
     sectorapc_id integer,
-    fechaformulacion date NOT NULL,
+    fechaformulacion date,
     fechaaprobacion date,
     fechaliquidacion date,
     estado character varying(1) DEFAULT 'E'::character varying,
@@ -3664,7 +3664,7 @@ CREATE SEQUENCE public.sivel2_gen_caso_fotra_seq
 CREATE TABLE public.sivel2_gen_caso_fotra (
     id_caso integer NOT NULL,
     id_fotra integer,
-    anotacion character varying(200),
+    anotacion character varying(1024),
     fecha date NOT NULL,
     ubicacionfisica character varying(1024),
     tfuente character varying(25),
@@ -3706,7 +3706,7 @@ CREATE SEQUENCE public.sivel2_gen_caso_fuenteprensa_seq
 
 CREATE TABLE public.sivel2_gen_caso_fuenteprensa (
     fecha date NOT NULL,
-    ubicacion character varying(100),
+    ubicacion character varying(1024),
     clasificacion character varying(100),
     ubicacionfisica character varying(1024),
     fuenteprensa_id integer NOT NULL,
@@ -9023,6 +9023,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20201201164343'),
 ('20201205041350'),
 ('20201205213317'),
-('20201214215209');
+('20201214215209'),
+('20201231194433'),
+('20210108133404'),
+('20210108145200');
 
 
