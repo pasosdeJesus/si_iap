@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: /var/www/var/run/postgresql
+  username: <%= ENV['BD_USUARIO'] || 'sipdes' %>
+  password: <%= ENV['BD_CLAVE'] %>
+
+development:
+  <<: *default
+  database: <%= ENV['BD_DES'] || 'siiap_des' %>
+
+test:
+  <<: *default
+  database: <%= ENV['BD_PRUEBA'] || 'siiap_pru' %>
+
+production:
+  <<: *default
+  database: <%= ENV['BD_PRO'] || 'siiap_pro' %>
