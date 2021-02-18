@@ -1585,7 +1585,8 @@ CREATE TABLE public.cor1440_gen_proyectofinanciero (
     fechaaprobacion date,
     fechaliquidacion date,
     estado character varying(1) DEFAULT 'E'::character varying,
-    dificultad character varying(1) DEFAULT 'N'::character varying
+    dificultad character varying(1) DEFAULT 'N'::character varying,
+    titulo character varying(1000)
 );
 
 
@@ -9088,6 +9089,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210108133404'),
 ('20210108145200'),
 ('20210108202122'),
-('20210116090353');
+('20210116090353'),
+('20210117234541'),
+('20210201101144'),
+('20210206191033');
 
 

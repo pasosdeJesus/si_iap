@@ -40,7 +40,7 @@ module Cor1440
 
     # heb412
     config.x.heb412_ruta = Pathname(
-      ENV.fetch('HEB412_RUTA', Rails.root.join('public', 'heb412').tos)
+      ENV.fetch('HEB412_RUTA', Rails.root.join('public', 'heb412').to_s)
     )
 
     # sivel2
