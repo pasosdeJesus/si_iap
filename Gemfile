@@ -25,6 +25,8 @@ gem 'libxml-ruby'
 
 gem 'odf-report' # Genera ODT
 
+gem 'parslet'
+
 gem 'paperclip' # Maneja adjuntos
 
 gem 'pg' # Postgresql
