@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/pasosdeJesus/cor1440_gen.git
-  revision: dbee2bfd4c26e54595206d2a74e1ea64208975ad
+  revision: e6f7a9e0063ee04a0cf4ae937b5510d4a2709f50
   branch: main
   specs:
     cor1440_gen (1.0b3)
@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/heb412_gen.git
-  revision: 94820137a04235d5ebc132fdef9d35e778f1925f
+  revision: 15bd380b9d43fd1f04ccd249ea135daa62c6bd86
   branch: main
   specs:
     heb412_gen (1.0.b6)
@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/sip.git
-  revision: 134b5da4626d27a58e437d37a45646b034c1d893
+  revision: f83c1d3f3b56a9b7967259da0919d02b68334978
   branch: main
   specs:
     sip (2.0.b11)
@@ -53,10 +53,10 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/sivel2_gen.git
-  revision: cbc09792e87696404ccd3f6418cb98f4d29063e6
+  revision: c55463bdcb8e7afd6ae4842b2dbb80d28ef7f75b
   branch: main
   specs:
-    sivel2_gen (2.0b14)
+    sivel2_gen (2.0b15)
       devise
       jquery-rails
       rails
@@ -164,7 +164,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     colorize (0.8.1)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     crass (1.0.6)
     devise (4.8.0)
       bcrypt (~> 3.0)
@@ -197,7 +197,7 @@ GEM
     json (2.5.1)
     kgio (2.11.4)
     libxml-ruby (3.2.1)
-    loofah (2.9.1)
+    loofah (2.10.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
