@@ -40,13 +40,17 @@
         <%= opcion_menu 'Medición de indicadores', 
           cor1440_gen.mindicadorespf_path, desplegable: true %>
       <% end %>
-      <%= despliega_abajo 'Acompañados' do %>
-        <%= opcion_menu 'Organizaciones', sip.actoressociales_path,
+      <%= despliega_abajo 'Organizaciones' do %>
+        <%= opcion_menu 'Acciones de organizaciones', sip.actoressociales_path,
           desplegable: true %>
-        <%= opcion_menu 'ZRC', main_app.zrcs_path,
+        <%= opcion_menu 'Organizaciones', sip.actoressociales_path,
           desplegable: true %>
         <%= opcion_menu 'Personas', 
           sip.personas_path, desplegable: true %>
+        <%= opcion_menu 'ZRC', main_app.zrcs_path,
+          desplegable: true %>
+        <%= opcion_menu 'Regiones', sivel2_gen.admin_regiones_path,
+          desplegable: true %>
       <% end %>
       <%= despliega_abajo 'Contextos' do %>
          <%= opcion_menu 'Listado', sip.actoressociales_path,
