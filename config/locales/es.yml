@@ -7,6 +7,21 @@ es:
     proyectos: Aspectos Programáticos
   activerecord:
     attributes:
+      "contexto":
+        region_id: Región
+        region: Región
+        fechaini: Fecha inicial
+        fechaini_localizada: Fecha inicial
+        fechafin: Fecha final
+        fechafin_localizada: Fecha final
+        politicoelectoral: Político electoral
+        social: Social
+        megaproyectosempresas: Megraproyectos y empresas
+        economiainfraestructura: Economía e infraestructura
+        figurasterritoriales: Figuras Territoriales
+        recursosambientales: Recursos Ambientales
+        estructurasarmadas: Estructuras armadas y sus alianzas
+        estadoacuerdo: Estado de implementación de los acuerdos de paz
       "cor1440_gen/actividad":
         actividadpf: Actividad de marco lógico
         poblacion_hombres_r: Población hombres
@@ -45,14 +60,15 @@ es:
         Nodo: Nodo
         Nodos: Nodos
       "sip/orgsocial":
-        Orgsocial: Organización
-        Orgsociales: Organizaciones
+        acompanada: Acompañada por IAP
+        carpeta: Carpeta en nube
         nit: Nit
         numasociados: Número de asociados (hombres)
         numasociadas: Número de asociadas (mujeres)
-        carpeta: Carpeta en nube
         nivelorganzorc: Nivel de organización
-        tipoorganzorc: Tipo de organización
+        Orgsocial: Organización social
+        Orgsociales: Organizaciones sociales
+        tipoorganzorc: Tipo de organización formal privada
         "{:orgsocial persona=>[]}": Contactos
       "tipoorganzorc": 
         Tipoorganzorc: Tipo de organización

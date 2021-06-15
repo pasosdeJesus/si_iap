@@ -532,6 +532,48 @@ CREATE VIEW public.cben2 AS
 
 
 --
+-- Name: contexto; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.contexto (
+    id bigint NOT NULL,
+    nombre text NOT NULL COLLATE public.es_co_utf_8,
+    region_id integer NOT NULL,
+    fechaini date NOT NULL,
+    fechafin date NOT NULL,
+    politicoelectoral text,
+    social text,
+    megaproyectosempresas text,
+    economiainfraestructura text,
+    figurasterritoriales text,
+    recursosambientales text,
+    estructurasarmadas text,
+    estadoacuerdo text,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: contexto_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.contexto_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: contexto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.contexto_id_seq OWNED BY public.contexto.id;
+
+
+--
 -- Name: cor1440_gen_actividad; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3103,7 +3145,8 @@ CREATE TABLE public.sip_orgsocial (
     numasociadas integer,
     carpeta character varying(5000),
     tipoorganzorc_id integer,
-    nivelorganzorc_id integer
+    nivelorganzorc_id integer,
+    acompanada boolean
 );
 
 
@@ -4894,6 +4937,13 @@ ALTER TABLE ONLY public.actividad_observacion ALTER COLUMN id SET DEFAULT nextva
 
 
 --
+-- Name: contexto id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.contexto ALTER COLUMN id SET DEFAULT nextval('public.contexto_id_seq'::regclass);
+
+
+--
 -- Name: cor1440_gen_actividad id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5508,6 +5558,14 @@ ALTER TABLE ONLY public.sivel2_gen_categoria
 
 ALTER TABLE ONLY public.sivel2_gen_contexto
     ADD CONSTRAINT contexto_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: contexto contexto_pkey1; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.contexto
+    ADD CONSTRAINT contexto_pkey1 PRIMARY KEY (id);
 
 
 --
@@ -8309,6 +8367,14 @@ ALTER TABLE ONLY public.cor1440_gen_formulario_mindicadorpf
 
 
 --
+-- Name: contexto fk_rails_e0b95973bc; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.contexto
+    ADD CONSTRAINT fk_rails_e0b95973bc FOREIGN KEY (region_id) REFERENCES public.sivel2_gen_region(id);
+
+
+--
 -- Name: heb412_gen_campoplantillahcm fk_rails_e0e38e0782; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9258,6 +9324,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210608180736'),
 ('20210609024118'),
 ('20210614120835'),
-('20210614212220');
+('20210614212220'),
+('20210615000000'),
+('20210615110530');
 
 

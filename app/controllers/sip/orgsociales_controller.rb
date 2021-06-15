@@ -12,33 +12,62 @@ module Sip
     def atributos_index
       [ :id, 
         :grupoper_id,
-        :zrc,
-        :nivelorganzorc,
-        :tipoorganzorc,
-        :nit,
-        :web,
+        :acompanada,
         :telefono, 
-        :fax,
-        :direccion,
-        :numasociados,
-        :numasociadas,
-        :carpeta,
-      ] +
-      [ :orgsocial_persona => [] ] +
-      [
+        :web,
+        :direccion
+      ] + [ 
+        :orgsocial_persona => [] 
+      ] + [
         :habilitado
       ]
     end
 
     def atributos_show
-      atributos_index - [:habilitado] + 
-        [:fechadeshabilitacion_localizada]
+      [ :id, 
+        :grupoper_id,
+        :acompanada,
+        :telefono, 
+        :web,
+        :fax,
+        :direccion
+      ] + [ 
+        :orgsocial_persona => [] 
+      ] + [
+        :sectororgsocial_ids,
+        :zrc,
+        :nivelorganzorc,
+        :tipoorganzorc,
+        :nit,
+        :numasociados,
+        :numasociadas,
+        :carpeta
+      ] + [
+        :fechadeshabilitacion_localizada
+      ]
     end
 
     def atributos_form
-      a = atributos_show - [:id]
-      a[a.index(:grupoper_id)] = :grupoper
-      return a
+      [ :grupoper,
+        :acompanada,
+        :telefono, 
+        :web,
+        :fax,
+        :direccion
+      ] + [ 
+        :orgsocial_persona => [] 
+      ] + [
+        :sectororgsocial_ids,
+        :zrc,
+        :nivelorganzorc,
+        :tipoorganzorc,
+        :nit,
+        :numasociados,
+        :numasociadas,
+        :carpeta
+      ] + [
+        :fechadeshabilitacion_localizada
+      ]
     end
 
     def lista_params 

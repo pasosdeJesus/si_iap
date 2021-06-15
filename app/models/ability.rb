@@ -84,10 +84,13 @@ class Ability  < Cor1440Gen::Ability
       can :index, Cor1440Gen::Proyectofinanciero
       can :index, Cor1440Gen::Actividad
 
+      can [:manage], Contexto
       can [:index,:read], Nodo
       can [:index,:read], Zrc
       can [:index,:read], Observacion
+
     when Ability::ROLADMIN, Ability::ROLDIR
+      can :manage, Contexto
       can :manage, Nodo
       can :manage, Zrc
       can :manage, Observacion
