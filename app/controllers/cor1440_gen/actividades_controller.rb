@@ -25,7 +25,7 @@ module Cor1440Gen
         :actividadpf, 
         :objetivo,
         :respuestafor,
-        :actorsocial,
+        :orgsocial,
         :listadoasistencia,
         :poblacion,
         :anexos,
