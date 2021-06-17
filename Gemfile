@@ -21,13 +21,14 @@ gem 'devise-i18n'
 
 gem 'jbuilder' # API JSON facil. Ver: https://github.com/rails/jbuilder
 
+gem 'kt-paperclip',                 # Anexos
+  git: 'https://github.com/kreeti/kt-paperclip.git'
+
 gem 'libxml-ruby'
 
 gem 'odf-report' # Genera ODT
 
 gem 'parslet'
-
-gem 'paperclip' # Maneja adjuntos
 
 gem 'pg' # Postgresql
 
