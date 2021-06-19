@@ -82,6 +82,7 @@ module Sip
           :orgsocial_persona_attributes => [
             :id,
             :perfilorgsocial_id,
+            :cargo, 
             :correo,
             :_destroy,
             :persona_attributes => [
