@@ -7,6 +7,15 @@ es:
     proyectos: Aspectos Programáticos
   activerecord:
     attributes:
+      "accionesorg":
+        anexos: Anexos
+        fecha_localizada: Fecha
+        descripción: Descripción
+        hombres: Número de hombres
+        mujeres: Número de mujeres
+        nombre: Nombre
+        orgsocial_ids: Organizaciones sociales
+        otros: Número de otros
       "contexto":
         region_id: Región
         region: Región

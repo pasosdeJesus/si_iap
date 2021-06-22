@@ -28,10 +28,10 @@
           sivel2_gen.conteos_victimizaciones_path,
           desplegable: true %>
       <% end %>
-      <%= despliega_abajo 'Acciones IAP' do %>
-        <%= opcion_menu 'Listado de Actividades', cor1440_gen.actividades_path,
+      <%= despliega_abajo 'IAP' do %>
+        <%= opcion_menu 'Actividades', cor1440_gen.actividades_path,
           desplegable: true %>
-        <%= opcion_menu 'Listado de Proyectos', 
+        <%= opcion_menu 'Proyectos', 
           cor1440_gen.proyectosfinancieros_path, desplegable: true %>
         <%= opcion_menu "Conteo por actividad de proyecto", 
           cor1440_gen.contar_actividades_path, desplegable: true %>
@@ -40,12 +40,12 @@
         <%= opcion_menu 'Medición de indicadores', 
           cor1440_gen.mindicadorespf_path, desplegable: true %>
       <% end %>
-      <%= despliega_abajo 'Organizaciones acompañadas' do %>
-        <%= opcion_menu 'Acciones de organizaciones', sip.orgsociales_path,
+      <%= despliega_abajo 'Org. Acompañadas' do %>
+        <%= opcion_menu 'Acciones de organizaciones', main_app.accionesorg_path,
           desplegable: true %>
         <%= opcion_menu 'ZRC', main_app.zrcs_path,
           desplegable: true %>
-        <%= opcion_menu 'Contactos y/o víctimas', 
+        <%= opcion_menu 'Personas y/o víctimas', 
           sip.personas_path, desplegable: true %>
       <% end %>
       <%= despliega_abajo 'Contextos' do %>
@@ -53,15 +53,15 @@
           desplegable: true %>
         <%= opcion_menu 'Regiones', sivel2_gen.admin_regiones_path,
           desplegable: true %>
-        <%= opcion_menu 'Organizaciones sociales', sip.orgsociales_path,
-          desplegable: true %>
       <% end %>
+      <%= opcion_menu 'Directorio', sip.orgsociales_path,
+          desplegable: false %>
     <% end %>
   <% end %>
 
   <%= grupo_menus :pull => :right do %>
     <%= despliega_abajo 'Documentos' do %>
-      <%= opcion_menu 'Manual', 'https://docs.google.com/document/d/1fpwDBcbjAj0faDA0IREYTbQj2BnPivkViGEuFELkwGk/edit?usp=sharing',
+      <%= opcion_menu 'Manual', 'https://docs.google.com/document/d/1fpwDBcbjAj0faDA0IREYTbQj2BnPivkViGEuFELkwGk/edit?usp=sharing://docs.google.com/document/d/1VnKbtnujb-ukuNJBEmSswxKZYRkvH1W2OnkA8Ta755w/edit#',
         target: '_blank',
         desplegable: true %>
       <%= opcion_menu 'Nube', heb412_gen.sisini_path,

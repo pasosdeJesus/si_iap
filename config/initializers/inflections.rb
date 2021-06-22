@@ -18,6 +18,7 @@
 #          Gem::Specification.find_by_name("sip").gem_dir, 
 #          'config/initializers/inflections')
 ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'accionorg', 'accionesorg'
   inflect.irregular 'contexto', 'contextos'
   inflect.irregular 'nodo', 'nodos'
   inflect.irregular 'zrc', 'zrcs'

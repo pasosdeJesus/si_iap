@@ -194,6 +194,60 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- Name: accionorg; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.accionorg (
+    id bigint NOT NULL,
+    fecha date NOT NULL,
+    nombre character varying(1024) NOT NULL,
+    descripcion character varying(5000),
+    hombres integer,
+    mujeres integer,
+    otros integer
+);
+
+
+--
+-- Name: accionorg_anexo; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.accionorg_anexo (
+    accionorg_id bigint NOT NULL,
+    anexo_id bigint NOT NULL
+);
+
+
+--
+-- Name: accionorg_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.accionorg_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: accionorg_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.accionorg_id_seq OWNED BY public.accionorg.id;
+
+
+--
+-- Name: accionorg_orgsocial; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.accionorg_orgsocial (
+    accionorg_id bigint NOT NULL,
+    orgsocial_id bigint NOT NULL
+);
+
+
+--
 -- Name: actividad_observacion; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -4940,6 +4994,13 @@ ALTER SEQUENCE public.zrc_id_seq OWNED BY public.zrc.id;
 
 
 --
+-- Name: accionorg id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accionorg ALTER COLUMN id SET DEFAULT nextval('public.accionorg_id_seq'::regclass);
+
+
+--
 -- Name: actividad_observacion id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5448,6 +5509,14 @@ ALTER TABLE ONLY public.tipoorganzorc ALTER COLUMN id SET DEFAULT nextval('publi
 --
 
 ALTER TABLE ONLY public.zrc ALTER COLUMN id SET DEFAULT nextval('public.zrc_id_seq'::regclass);
+
+
+--
+-- Name: accionorg accionorg_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accionorg
+    ADD CONSTRAINT accionorg_pkey PRIMARY KEY (id);
 
 
 --
@@ -7537,6 +7606,14 @@ ALTER TABLE ONLY public.cor1440_gen_actividadpf
 
 
 --
+-- Name: accionorg_anexo fk_rails_17edfe17e4; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accionorg_anexo
+    ADD CONSTRAINT fk_rails_17edfe17e4 FOREIGN KEY (anexo_id) REFERENCES public.sip_anexo(id);
+
+
+--
 -- Name: mr519_gen_encuestausuario fk_rails_1b24d10e82; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7977,6 +8054,14 @@ ALTER TABLE ONLY public.sip_grupo_usuario
 
 
 --
+-- Name: accionorg_orgsocial fk_rails_763a677d41; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accionorg_orgsocial
+    ADD CONSTRAINT fk_rails_763a677d41 FOREIGN KEY (accionorg_id) REFERENCES public.accionorg(id);
+
+
+--
 -- Name: usuarionotificar_observacion fk_rails_798728a770; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8185,11 +8270,27 @@ ALTER TABLE ONLY public.sivel2_gen_combatiente
 
 
 --
+-- Name: accionorg_anexo fk_rails_afcff68aed; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accionorg_anexo
+    ADD CONSTRAINT fk_rails_afcff68aed FOREIGN KEY (accionorg_id) REFERENCES public.accionorg(id);
+
+
+--
 -- Name: cor1440_gen_indicadorpf fk_rails_b5b70fb7f7; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.cor1440_gen_indicadorpf
     ADD CONSTRAINT fk_rails_b5b70fb7f7 FOREIGN KEY (proyectofinanciero_id) REFERENCES public.cor1440_gen_proyectofinanciero(id);
+
+
+--
+-- Name: accionorg_orgsocial fk_rails_b6d48c8dbe; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accionorg_orgsocial
+    ADD CONSTRAINT fk_rails_b6d48c8dbe FOREIGN KEY (orgsocial_id) REFERENCES public.sip_orgsocial(id);
 
 
 --
@@ -9354,6 +9455,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210615000000'),
 ('20210615110530'),
 ('20210616003251'),
-('20210619191706');
+('20210619191706'),
+('20210622144321');
 
 

@@ -22,6 +22,8 @@ Rails.application.routes.draw do
         :as => 'registro_usuario'
     end
 
+    resources :accionesorg, path_names: {new: 'nueva', edit: 'edita' }
+
     resources :contextos, path_names: {new: 'nuevo', edit: 'edita' }
 
     resources :observaciones, path_names: { new: 'nueva', edit: 'edita' }
