@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/cor1440_gen.git
-  revision: 24d45eb691a259e5fa8c3cb08b631aefbdc524e8
+  revision: be743c401363d6129631abfb2da402ce6da70e02
   branch: main
   specs:
     cor1440_gen (1.0b4)
@@ -25,7 +25,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/heb412_gen.git
-  revision: 7e46d1e708be95ef6abefeabc93a594331b42c4f
+  revision: ca3be815779cc65e08ce4e2d394b36773d9f50ed
   branch: main
   specs:
     heb412_gen (1.0.b6)
@@ -36,7 +36,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/mr519_gen.git
-  revision: f695e5fb6e354242f4457c6e32f7f301bda95cc5
+  revision: 0ec74de4c1c429cab2768783dcb1104fada8bc61
   branch: main
   specs:
     mr519_gen (0.2.0)
@@ -45,7 +45,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/sip.git
-  revision: beb4e8953e53b8947f46a26a1c52ac33181c989b
+  revision: 0a380a499c6726c25765d2cc660f972159c74a43
   branch: main
   specs:
     sip (2.0.b12)
@@ -64,7 +64,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/sivel2_gen.git
-  revision: 560831ddfb56e8dde295256b645757397e89353a
+  revision: 40bb1e7a4de3bbe4763b678778d411b2edc2dd53
   branch: main
   specs:
     sivel2_gen (2.0b15)
@@ -365,7 +365,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
+  x86_64-openbsd
 
 DEPENDENCIES
   bcrypt
@@ -413,7 +413,7 @@ DEPENDENCIES
   will_paginate
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 3.0.1p64
 
 BUNDLED WITH
-   2.2.15
+   2.2.20
