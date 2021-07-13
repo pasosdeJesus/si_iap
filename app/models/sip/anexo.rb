@@ -10,7 +10,7 @@ module Sip
 
       self.table_name = 'sip_anexo'
       has_attached_file :adjunto, 
-        :path => Rails.application.config.x.heb412_ruta.join('ANEXOS').to_s + "/:carpeta" + "/:id_:filename"
+        :path => Sip.ruta_anexos.to_s + "/:carpeta" + "/:id_:filename"
       Paperclip.interpolates('carpeta') do |attachment, style| 
         attachment.instance.carpeta.parameterize 
       end 

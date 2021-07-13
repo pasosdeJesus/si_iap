@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col-md-6">
         <% pdir = [] 
-          Dir.chdir(Rails.application.config.x.heb412_ruta.join('ANEXOS')) { 
+          Dir.chdir(Sip.ruta_anexos.to_s) { 
             pdir = Dir.glob("./**/") } %>
         <% if !pdir.empty? %>
           <%= a.input :carpeta, 
