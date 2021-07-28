@@ -93,6 +93,13 @@ module Sip
         ] 
     end
 
+    def new
+      @registro = @orgsocial = Sip::Orgsocial.new
+      @registro.grupoper_id = Sip::Grupoper.find_by_nombre('N').id
+      @registro.save!(validate: false)
+      redirect_to sip.edit_orgsocial_path(@registro)
+    end
+
     def orgsocial_params
       params.require(:orgsocial).permit(lista_params)
     end
