@@ -23,6 +23,9 @@ Rails.start()
 import Turbolinks from "turbolinks"
 Turbolinks.start()
 
+import ApexCharts from 'apexcharts'
+window.ApexCharts = ApexCharts
+
 var L = require('leaflet');
 var mc= require('leaflet.markercluster');
 

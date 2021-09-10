@@ -9,7 +9,7 @@ Sip.setup do |config|
   if ENV["HEROKU_POSTGRESQL_MAUVE_URL"]
     config.ruta_anexos = "#{Rails.root}/tmp/"
   end
-  config.titulo = "SI-IAP #{Sivel2Gen::VERSION}"
+  config.titulo = "MIVIAP #{Sivel2Gen::VERSION}"
 
   config.colorom_fondo = '#ffffff'
   config.colorom_color_fuente = '#000000'

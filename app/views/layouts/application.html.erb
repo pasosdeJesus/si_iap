@@ -29,38 +29,48 @@
         <%= opcion_menu 'Conteo de victimizaciones individuales', 
           sivel2_gen.conteos_victimizaciones_path,
           desplegable: true %>
-      <% end %>
-      <%= despliega_abajo 'IAP' do %>
-        <%= opcion_menu 'Acciones', cor1440_gen.actividades_path,
-          desplegable: true %>
-        <%= opcion_menu 'Proyectos', 
-          cor1440_gen.proyectosfinancieros_path, desplegable: true %>
-        <%= opcion_menu "Conteo por actividad de proyecto", 
-          cor1440_gen.contar_actividades_path, desplegable: true %>
-        <%= opcion_menu "Conteo por beneficiario y actividad de proyecto", 
-          cor1440_gen.contar_actividades_beneficiarios_path, desplegable: true %>
-        <%= opcion_menu 'Medición de indicadores', 
-          cor1440_gen.mindicadorespf_path, desplegable: true %>
-      <% end %>
-      <%= despliega_abajo 'Org. Acompañadas' do %>
-        <%= opcion_menu 'Acciones de organizaciones', main_app.accionesorg_path,
-          desplegable: true %>
-        <%= opcion_menu 'ZRC', main_app.zrcs_path,
-          desplegable: true %>
+        <%= opcion_menu "Árbol de presuntos responsables",
+          sivel2_gen.arbol_presponsables_path, desplegable: true %>
         <%= opcion_menu 'Personas y/o víctimas', 
           sip.personas_path, desplegable: true %>
       <% end %>
-      <%= despliega_abajo 'Contextos' do %>
-         <%= opcion_menu 'Listado', main_app.contextos_path,
+      <%= despliega_abajo 'Acciones de IAP' do %>
+        <%= opcion_menu 'Acciones', cor1440_gen.actividades_path,
           desplegable: true %>
-        <%= opcion_menu 'Regiones', sivel2_gen.admin_regiones_path,
+        <%= opcion_menu 'Proyectos', 
+          cor1440_gen.proyectosfinancieros_path, 
+          desplegable: true %>
+        <%= opcion_menu "Conteo por actividades de proyecto", 
+          cor1440_gen.contar_actividades_path, desplegable: true %>
+        <%= opcion_menu "Conteo por beneficiario y actividad de proyecto", 
+          cor1440_gen.contar_actividades_beneficiarios_path, 
+          desplegable: true %>
+        <%= opcion_menu 'Medición de indicadores', 
+          cor1440_gen.mindicadorespf_path, desplegable: true %>
+      <% end %>
+      <%= despliega_abajo 'Contexto y Organizaciones' do %>
+        <%= opcion_menu 'Organizaciones acompañadas', '#',
+          desplegable: true %>
+        <%= opcion_menu 'Acciones de organizaciones acompañadas', 
+          main_app.accionesorg_path, desplegable: true %>
+        <%= opcion_menu 'Organizaciones sociales',
+          '#', desplegable: true %>
+        <%= opcion_menu 'Coyunturas regionales', main_app.contextos_path,
+          desplegable: true %>
+        <%= opcion_menu 'ZRC', main_app.zrcs_path,
           desplegable: true %>
       <% end %>
-      <%= opcion_menu 'Directorio', sip.orgsociales_path,
-          desplegable: false %>
+      <%= despliega_abajo 'Directorio' do %>
+        <%= opcion_menu 'Instituciones civiles', '#',
+          desplegable: true %>
+        <%= opcion_menu 'Fuerza Pública', '#',
+          desplegable: true %>
+        <%= opcion_menu 'Organismos internacionales',  '#',
+          desplegable: true %>
+      <% end %>
     <% end %>
-  <% end %>
 
+  <% end %>
   <%= grupo_menus :pull => :right do %>
     <%= despliega_abajo 'Documentos' do %>
       <%= opcion_menu 'Manual', 'https://docs.google.com/document/d/1fpwDBcbjAj0faDA0IREYTbQj2BnPivkViGEuFELkwGk/edit?usp=sharing://docs.google.com/document/d/1VnKbtnujb-ukuNJBEmSswxKZYRkvH1W2OnkA8Ta755w/edit#',
