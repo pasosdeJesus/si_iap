@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>=2.7.1'
 
+gem 'apexcharts'
 
 gem 'bcrypt'
 
@@ -68,8 +69,8 @@ gem 'will_paginate' # Listados en páginas
 # lógico y no alfabetico como las gemas anteriores) 
 
 gem 'sip', # Motor generico
-  git: 'https://github.com/pasosdeJesus/sip.git', branch: :main
-  #path: '../sip'
+  #git: 'https://github.com/pasosdeJesus/sip.git', branch: :main
+  path: '../sip'
 
 gem 'mr519_gen', # Motor de gestion de formularios y encuestas
   git: 'https://github.com/pasosdeJesus/mr519_gen.git', branch: :main

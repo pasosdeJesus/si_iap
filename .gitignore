@@ -19,6 +19,7 @@ log/
 node_modules/
 public/iap/ensayo/
 public/iap/si/
+public/iap/miviap/
 public/heb412/
 public/packs/
 tmp/

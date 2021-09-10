@@ -1,0 +1,66 @@
+<%- if current_usuario.nil?  %>
+  <li><a href="usuarios/sign_in">Iniciar Sesión</a>
+<%- else  %>
+  <article>
+  <script>
+    $(document).ready(function() {
+      window.sivel2_enviarFichaCasoCada60()  ;
+    });
+  </script>
+  <%= simple_form_for @registro, 
+    :html => { :class => 'form-horizontal' } do |f| %>
+    <div data-role="content" class="form-inputs">
+
+      <%= render partial: 'sip/hogar/errores', locals: { f: f } %>
+
+      <%= render partial: 'sivel2_gen/casos/datos_interjs', locals: { f: f } %>
+
+      <ul class="nav nav-tabs" role="tablist">
+        <%= item_nav_pestaña_bs( 'basicos', 'Datos Básicos', true, '') %>
+        <%= item_nav_pestaña_bs( 'ubicacion', 'Ubicación', false, '') %>
+        <%= item_nav_pestaña_bs( 'tipodeaccion', 'Tipo de acción', false, '') %>
+        <%= item_nav_pestaña_bs( 'descripcion', 'Descripción', false, '') %>
+        <%= item_nav_pestaña_bs( 'pesanexos', 'Anexos', false, '') %>
+        <%= item_nav_pestaña_bs( 'etiquetas', 'Etiquetas', false, '') %>
+        <%= item_nav_pestaña_bs( 'evaluacion', 'Evaluacion', false, '') %>
+      </ul>
+      <div class="tab-content">
+        <%= contenido_pestaña_bs('basicos', true) do %>
+          <%= render 'basicos', :f => f %>
+        <% end %>
+        <%= contenido_pestaña_bs('ubicacion', false) do %>
+          <%= render 'ubicacion', :f => f %>
+        <% end %>
+        <%= contenido_pestaña_bs('tipodeaccion', false) do %>
+          <%= render 'tipodeaccion', :f => f %>
+        <% end %>
+        <%= contenido_pestaña_bs('descripcion', false) do %>
+          <%= render 'descripcion', :f => f %>
+        <% end %>
+        <%= contenido_pestaña_bs('pesanexos', false) do %>
+          <%= render 'pesanexos', :f => f %>
+        <% end %>
+        <%= contenido_pestaña_bs('etiquetas', false) do %>
+          <%= render 'etiquetas', :f => f %>
+        <% end %>
+        <%= contenido_pestaña_bs('evaluacion', false) do %>
+          <%= render 'evaluacion', :f => f %>
+        <% end %>
+
+      </div> <!-- tab-content -->
+    </div> <!-- form-inputs -->
+
+    <div class="form-actions">
+      <% if controller.registrar_en_bitacora %>
+        <input class='bitacora_cambio' id='actividad_bictacora_cambio' 
+               name='actividad[bitacora_cambio]' type='hidden'>
+      <% end %>
+      <%= f.button :submit, 'Validar y Guardar', :class => 'btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+        actividades_path, :class => 'btn' 
+      %>
+    </div> <!-- form-action -->
+  <% end %> <!-- simple_form_for @caso -->
+  </article>
+<% end %> <!-- else -->
+

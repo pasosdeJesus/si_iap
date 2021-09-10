@@ -32,7 +32,12 @@ es:
         estructurasarmadas: Estructuras armadas y sus alianzas
         estadoacuerdo: Estado de implementación de los acuerdos de paz
       "cor1440_gen/actividad":
+        Actividad: Acción
+        Actividades: Acciones
         actividadpf: Actividad de marco lógico
+        nombre: Título
+        objetivo: Objetivo de la acción
+        orgsocial: Organización social acompañada
         poblacion_hombres_r: Población hombres
         poblacion_mujeres_r: Población mujeres
         poblacion_sinsexo: Otros

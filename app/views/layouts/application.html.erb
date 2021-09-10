@@ -16,6 +16,8 @@
           <%= opcion_menu 'Importar relatos XRLAT', 
             sivel2_gen.casos_importarrelatos_path, desplegable: true %>
         <% end %>
+        <%= opcion_menu "Árbol de presuntos responsables",
+          sivel2_gen.arbol_presponsables_path, desplegable: true %>
         <%= opcion_menu 'Geolocalización de casos sobre OpenStreetMap',
           sivel2_gen.casos_mapaosm_path, desplegable: true %>
         <%= opcion_menu 'Listado de víctimas y casos', 
@@ -29,7 +31,7 @@
           desplegable: true %>
       <% end %>
       <%= despliega_abajo 'IAP' do %>
-        <%= opcion_menu 'Actividades', cor1440_gen.actividades_path,
+        <%= opcion_menu 'Acciones', cor1440_gen.actividades_path,
           desplegable: true %>
         <%= opcion_menu 'Proyectos', 
           cor1440_gen.proyectosfinancieros_path, desplegable: true %>
