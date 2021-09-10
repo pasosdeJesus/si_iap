@@ -1,12 +1,17 @@
-
-# encoding: UTF-8
-
 require 'cor1440_gen/concerns/models/actividad'
+require 'sip/accesores_ubicacionpre'
 
 module Cor1440Gen
   class Actividad < ActiveRecord::Base
     include Cor1440Gen::Concerns::Models::Actividad
     include Sip::Localizacion
+
+    extend Sip::AccesoresUbicacionpre
+
+    accesores_ubicacionpre :ubicacionpre
+
+    belongs_to :ubicacionpre, class_name: '::Sip::Ubicacionpre',
+      foreign_key: 'ubicacionpre_id', optional: true
 
     has_many :actividad_observacion, dependent: :delete_all,
       class_name: 'ActividadObservacion',
