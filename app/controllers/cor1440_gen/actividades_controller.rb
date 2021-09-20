@@ -13,20 +13,18 @@ module Cor1440Gen
 
     def update
       # Procesar ubicacionespre de migración
-        if false # por ahora mientras se puebal ubicacionpre
-        @registro.ubicacionpre_id = Sip::Ubicacionpre::buscar_o_agregar(
-          actividad_params[:ubicacionpre_pais_id], 
-          actividad_params[:ubicacionpre_departamento_id],
-          actividad_params[:ubicacionpre_municipio_id], 
-          actividad_params[:ubicacionpre_clase_id],
-          actividad_params[:ubicacionpre_lugar], 
-          actividad_params[:ubicacionpre_sitio], 
-          actividad_params[:ubicacionpre_tsitio_id],
-          actividad_params[:ubicacionpre_latitud], 
-          actividad_params[:ubicacionpre_longitud]
-        )
+      @registro.ubicacionpre_id = Sip::Ubicacionpre::buscar_o_agregar(
+        actividad_params[:ubicacionpre_pais_id], 
+        actividad_params[:ubicacionpre_departamento_id],
+        actividad_params[:ubicacionpre_municipio_id], 
+        actividad_params[:ubicacionpre_clase_id],
+        actividad_params[:ubicacionpre_lugar], 
+        actividad_params[:ubicacionpre_sitio], 
+        actividad_params[:ubicacionpre_tsitio_id],
+        actividad_params[:ubicacionpre_latitud], 
+        actividad_params[:ubicacionpre_longitud]
+      )
       @registro.save!
-        end
       update_gen
     end
 

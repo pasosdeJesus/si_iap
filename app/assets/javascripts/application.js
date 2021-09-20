@@ -24,6 +24,7 @@ document.addEventListener('turbolinks:load', function() {
     exports : window;
 
   sip_prepara_eventos_comunes(root, false, false);
+  sip_ubicacionpre_expandible_registra('actividad_', 'ubicacionpre', root);
   mr519_gen_prepara_eventos_comunes(root);
   heb412_gen_prepara_eventos_comunes(root);
   sivel2_gen_prepara_eventos_comunes(root);
