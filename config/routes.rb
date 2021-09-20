@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  rutarel = (ENV['RUTA_RELATIVA'] || 'iap/si/')
+  rutarel = (ENV['RUTA_RELATIVA'] || 'iap/miviap/')
   scope rutarel do
     devise_scope :usuario do
       get 'sign_out' => 'devise/sessions#destroy'

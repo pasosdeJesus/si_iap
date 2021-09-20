@@ -33,7 +33,7 @@ module Cor1440
 
     config.hosts <<  ENV.fetch('CONFIG_HOSTS', 'defensor.info').downcase
 
-    config.relative_url_root = ENV.fetch('RUTA_RELATIVA', '/iap/si')
+    config.relative_url_root = ENV.fetch('RUTA_RELATIVA', '/iap/miviap')
 
     # sip
     config.x.formato_fecha = ENV.fetch('FORMATO_FECHA', 'dd/M/yyyy')
