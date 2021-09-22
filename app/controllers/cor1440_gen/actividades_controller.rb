@@ -13,18 +13,23 @@ module Cor1440Gen
 
     def update
       # Procesar ubicacionespre de migración
-      @registro.ubicacionpre_id = Sip::Ubicacionpre::buscar_o_agregar(
-        actividad_params[:ubicacionpre_pais_id], 
-        actividad_params[:ubicacionpre_departamento_id],
-        actividad_params[:ubicacionpre_municipio_id], 
-        actividad_params[:ubicacionpre_clase_id],
-        actividad_params[:ubicacionpre_lugar], 
-        actividad_params[:ubicacionpre_sitio], 
-        actividad_params[:ubicacionpre_tsitio_id],
-        actividad_params[:ubicacionpre_latitud], 
-        actividad_params[:ubicacionpre_longitud]
-      )
-      @registro.save!
+      if actividad_params[:ubicacionpre_pais_id] && actividad_params[:ubicacionpre_pais_id] != ''
+        @registro.ubicacionpre_id = Sip::Ubicacionpre::buscar_o_agregar(
+          actividad_params[:ubicacionpre_pais_id], 
+          actividad_params[:ubicacionpre_departamento_id],
+          actividad_params[:ubicacionpre_municipio_id], 
+          actividad_params[:ubicacionpre_clase_id],
+          actividad_params[:ubicacionpre_lugar], 
+          actividad_params[:ubicacionpre_sitio], 
+          actividad_params[:ubicacionpre_tsitio_id],
+          actividad_params[:ubicacionpre_latitud_localizado].a_decimal_nolocalizado, 
+          actividad_params[:ubicacionpre_longitud_localizado].a_decimal_nolocalizado
+        )
+        begin
+          @registro.save!(validate: false)
+        rescue e
+        end
+      end
       update_gen
     end
 
@@ -60,6 +65,7 @@ module Cor1440Gen
         :poblacion_mujeres_r,
         :poblacion_sinsexo,
         :poblacion_total,
+        :etiqueta_ids,
         :anexos
       ]
     end
@@ -87,14 +93,15 @@ module Cor1440Gen
         [
           :ubicacionpre_clase_id,
           :ubicacionpre_departamento_id,
-          :ubicacionpre_latitud,
-          :ubicacionpre_longitud,
+          :ubicacionpre_latitud_localizado,
+          :ubicacionpre_longitud_localizado,
           :ubicacionpre_lugar,
           :ubicacionpre_municipio_id,
           :ubicacionpre_pais_id,
           :ubicacionpre_sitio,
           :ubicacionpre_tsitio_id,
-          :ubicacionpre_id
+      ] + [
+          etiqueta_ids: []
       ]
     end
 

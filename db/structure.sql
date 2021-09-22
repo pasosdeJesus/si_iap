@@ -702,6 +702,16 @@ CREATE TABLE public.cor1440_gen_actividad_actividadtipo (
 
 
 --
+-- Name: cor1440_gen_actividad_etiqueta; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.cor1440_gen_actividad_etiqueta (
+    actividad_id bigint NOT NULL,
+    etiqueta_id bigint NOT NULL
+);
+
+
+--
 -- Name: cor1440_gen_actividad_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -7957,6 +7967,14 @@ ALTER TABLE ONLY public.cor1440_gen_informe
 
 
 --
+-- Name: cor1440_gen_actividad_etiqueta fk_rails_2adad753de; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.cor1440_gen_actividad_etiqueta
+    ADD CONSTRAINT fk_rails_2adad753de FOREIGN KEY (actividad_id) REFERENCES public.cor1440_gen_actividad(id);
+
+
+--
 -- Name: cor1440_gen_informe fk_rails_2bd685d2b3; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8506,6 +8524,14 @@ ALTER TABLE ONLY public.sip_ubicacion
 
 ALTER TABLE ONLY public.usuarionotificar_observacion
     ADD CONSTRAINT fk_rails_a2745aecdb FOREIGN KEY (observacion_id) REFERENCES public.observacion(id);
+
+
+--
+-- Name: cor1440_gen_actividad_etiqueta fk_rails_a69991fcad; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.cor1440_gen_actividad_etiqueta
+    ADD CONSTRAINT fk_rails_a69991fcad FOREIGN KEY (etiqueta_id) REFERENCES public.sip_etiqueta(id);
 
 
 --
@@ -9754,6 +9780,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210730120340'),
 ('20210823162357'),
 ('20210910014520'),
-('20210920233009');
+('20210920233009'),
+('20210922004138'),
+('20210922021606');
 
 

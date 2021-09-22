@@ -9,15 +9,24 @@ module Cor1440Gen
     extend Sip::AccesoresUbicacionpre
 
     accesores_ubicacionpre :ubicacionpre
+    flotante_localizado :ubicacionpre_latitud
+    flotante_localizado :ubicacionpre_longitud
 
     belongs_to :ubicacionpre, class_name: '::Sip::Ubicacionpre',
       foreign_key: 'ubicacionpre_id', optional: true
 
+
+    has_and_belongs_to_many :etiqueta, 
+      class_name: 'Sip::Etiqueta',
+      foreign_key: 'actividad_id',
+      association_foreign_key: 'etiqueta_id',
+      join_table: 'cor1440_gen_actividad_etiqueta'
+
     has_many :actividad_observacion, dependent: :delete_all,
       class_name: 'ActividadObservacion',
       foreign_key: 'actividad_id'
-    has_many :observacion, through: :actividad_observacion, dependent: :delete_all,
-      class_name: 'Observacion'
+    has_many :observacion, through: :actividad_observacion, 
+      dependent: :delete_all, class_name: 'Observacion'
     accepts_nested_attributes_for :observacion,
       allow_destroy: true, reject_if: :all_blank
     accepts_nested_attributes_for :actividad_observacion,
