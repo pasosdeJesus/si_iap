@@ -17,9 +17,10 @@ class Ability  < Cor1440Gen::Ability
   BASICAS_PROPIAS =  [
     ['', 'estadozrc'],
     ['', 'estadoobs'],
+    ['', 'gradoimpacto'],
+    ['', 'nivelorganzorc'],
     ['', 'nodo'],
-    ['', 'tipoorganzorc'],
-    ['', 'nivelorganzorc']
+    ['', 'tipoorganzorc']
   ]
   
   def tablasbasicas 
@@ -84,18 +85,20 @@ class Ability  < Cor1440Gen::Ability
       can :index, Cor1440Gen::Proyectofinanciero
       can :index, Cor1440Gen::Actividad
 
-      can [:manage], Contexto
       can [:manage], Accionorg
+      can [:manage], Contexto
+      can [:index,:read], Gradoimpacto
       can [:index,:read], Nodo
-      can [:index,:read], Zrc
       can [:index,:read], Observacion
+      can [:index,:read], Zrc
 
     when Ability::ROLADMIN, Ability::ROLDIR
-      can :manage, Contexto
       can :manage, Accionorg
+      can :manage, Contexto
+      can :manage, Gradoimpacto
       can :manage, Nodo
-      can :manage, Zrc
       can :manage, Observacion
+      can :manage, Zrc
     end
 
   end

@@ -12,6 +12,13 @@ module Cor1440Gen
     flotante_localizado :ubicacionpre_latitud
     flotante_localizado :ubicacionpre_longitud
 
+    attr_reader :region_id
+
+    belongs_to :region, class_name: 'Sivel2Gen::Region',
+      foreign_key: 'region_id', optional: true
+
+    belongs_to :gradoimpacto, optional: true
+
     belongs_to :ubicacionpre, class_name: '::Sip::Ubicacionpre',
       foreign_key: 'ubicacionpre_id', optional: true
 
@@ -31,6 +38,12 @@ module Cor1440Gen
       allow_destroy: true, reject_if: :all_blank
     accepts_nested_attributes_for :actividad_observacion,
       allow_destroy: true, reject_if: :all_blank
+
+
+    def region_id
+      Sivel2Gen::Region.take.id # Por implementar
+    end
+
 
     def presenta(atr)
       total= 0

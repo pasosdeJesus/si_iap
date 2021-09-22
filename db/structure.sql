@@ -677,7 +677,8 @@ CREATE TABLE public.cor1440_gen_actividad (
     rangoedadac_id integer,
     usuario_id integer NOT NULL,
     lugar character varying(500),
-    ubicacionpre_id integer
+    ubicacionpre_id integer,
+    gradoimpacto_id integer
 );
 
 
@@ -2392,6 +2393,40 @@ CREATE SEQUENCE public.fotra_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
+
+
+--
+-- Name: gradoimpacto; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.gradoimpacto (
+    id bigint NOT NULL,
+    nombre character varying(500) NOT NULL COLLATE public.es_co_utf_8,
+    observaciones character varying(5000),
+    fechacreacion date NOT NULL,
+    fechadeshabilitacion date,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: gradoimpacto_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.gradoimpacto_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: gradoimpacto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.gradoimpacto_id_seq OWNED BY public.gradoimpacto.id;
 
 
 --
@@ -5470,6 +5505,13 @@ ALTER TABLE ONLY public.estadozrc ALTER COLUMN id SET DEFAULT nextval('public.es
 
 
 --
+-- Name: gradoimpacto id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.gradoimpacto ALTER COLUMN id SET DEFAULT nextval('public.gradoimpacto_id_seq'::regclass);
+
+
+--
 -- Name: heb412_gen_campohc id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -6254,6 +6296,14 @@ ALTER TABLE ONLY public.sivel2_gen_fotra
 
 ALTER TABLE ONLY public.sivel2_gen_frontera
     ADD CONSTRAINT frontera_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: gradoimpacto gradoimpacto_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.gradoimpacto
+    ADD CONSTRAINT gradoimpacto_pkey PRIMARY KEY (id);
 
 
 --
@@ -8719,6 +8769,14 @@ ALTER TABLE ONLY public.usuario
 
 
 --
+-- Name: cor1440_gen_actividad fk_rails_cd52795529; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.cor1440_gen_actividad
+    ADD CONSTRAINT fk_rails_cd52795529 FOREIGN KEY (gradoimpacto_id) REFERENCES public.gradoimpacto(id);
+
+
+--
 -- Name: cor1440_gen_campoact fk_rails_ceb6f1a7f0; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9782,6 +9840,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210910014520'),
 ('20210920233009'),
 ('20210922004138'),
-('20210922021606');
+('20210922021606'),
+('20210922031308'),
+('20210922040729');
 
 

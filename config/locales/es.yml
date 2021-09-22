@@ -36,6 +36,7 @@ es:
         Actividades: Acciones
         actividadpf: Actividad de marco lógico
         etiqueta: Etiqueta(s)
+        gradoimpacto: Grado de impacto
         nombre: Título
         objetivo: Objetivo de la acción
         orgsocial: Organización social acompañada
@@ -68,6 +69,9 @@ es:
       "estadoobs":
         Estadoobs: Estado de observación
         Estadosobs: Estados de observación
+      "gradoimpacto":
+         Gradoimpacto: Grado de impacto
+         Gradosimpacto: Grados de impacto
       "nivelorganzorc": 
         Nivelorganzorc: Nivel de organización
         Nivelesorganzorc: Niveles de organización

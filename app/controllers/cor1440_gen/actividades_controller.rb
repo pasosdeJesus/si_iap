@@ -47,7 +47,8 @@ module Cor1440Gen
         :listadoasistencia,
         :poblacion,
         :anexos,
-        :observacion
+        :observacion,
+        :gradoimpacto
       ]
     end
 
@@ -91,6 +92,7 @@ module Cor1440Gen
     def lista_params
       lista_params_cor1440_gen + 
         [
+          :gradoimpacto_id,
           :ubicacionpre_clase_id,
           :ubicacionpre_departamento_id,
           :ubicacionpre_latitud_localizado,

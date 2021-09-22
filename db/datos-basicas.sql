@@ -196,3 +196,23 @@ SELECT pg_catalog.setval('public.nivelorganzorc_id_seq', 100, true);
 -- PostgreSQL database dump complete
 --
 
+
+
+INSERT INTO public.gradoimpacto (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  1, 'SIN INFORMACIÓN',
+  '2021-09-21', '2021-09-21', '2021-09-21');
+INSERT INTO public.gradoimpacto (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  2, 'BAJO',
+  '2021-09-21', '2021-09-21', '2021-09-21');
+INSERT INTO public.gradoimpacto (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  3, 'MEDIO',
+  '2021-09-21', '2021-09-21', '2021-09-21');
+INSERT INTO public.gradoimpacto (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  4, 'ALTO',
+  '2021-09-21', '2021-09-21', '2021-09-21');
+
+SELECT pg_catalog.setval('public.gradoimpacto_id_seq', 100, true);
