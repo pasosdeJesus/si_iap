@@ -11,7 +11,7 @@ module Sivel2Gen
 
       def de_depmun
         d = params[:departamento_id] ? params[:departamento_id].to_i : nil
-        m = params[:departamento_id] ? params[:municipio_id].to_i : nil
+        m = params[:municipio_id] ? params[:municipio_id].to_i : nil
 
         r = Sivel2Gen::Region.calcula_de_depmun(d, m)
         respond_to do |format|
