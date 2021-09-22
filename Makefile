@@ -1,4 +1,18 @@
 
-valida:
-	coffee -o /tmp/ ../sivel2_gen/app/assets/javascripts/sivel2_gen/libcasos.js.coffee
-	coffee -o /tmp/ ../sivel2_gen/app/assets/javascripts/sivel2_gen/casos.js.coffee
+valida: valida-js valida-ruby
+
+valida-js:
+	for i in `find app/assets -name "*js"`; do \
+		node -c $$i; \
+	done; \
+	for i in `find app/assets/javascripts/ -name "*coffee"`; do \
+		coffee -o /tmp/ $$i; \
+	done;
+
+valida-ruby:
+	find . -name "*\.rb" -exec ruby -w -W2 -c {} ';'
+
+erd:
+	bundle exec erd
+	mv erd.pdf doc/
+	convert doc/erd.pdf doc/erd.png

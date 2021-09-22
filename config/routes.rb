@@ -36,6 +36,9 @@ Rails.application.routes.draw do
       'cor1440_gen/proyectosfinancieros#matriz_seguimiento',
         as: 'matrizseguimiento'
 
+    get 'regiones/de_depmun' => 'sivel2_gen/admin/regiones#de_depmun',
+      as: 'region_de_depmun'
+
     namespace :admin do
       ab = ::Ability.new
       ab.tablasbasicas.each do |t|

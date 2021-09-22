@@ -12,10 +12,12 @@ module Cor1440Gen
     flotante_localizado :ubicacionpre_latitud
     flotante_localizado :ubicacionpre_longitud
 
-    attr_reader :region_id
+    attr_accessor :region_id
 
-    belongs_to :region, class_name: 'Sivel2Gen::Region',
-      foreign_key: 'region_id', optional: true
+    belongs_to :region, 
+      class_name: 'Sivel2Gen::Region',
+      foreign_key: 'region_id', 
+      optional: true
 
     belongs_to :gradoimpacto, optional: true
 
@@ -41,7 +43,11 @@ module Cor1440Gen
 
 
     def region_id
-      Sivel2Gen::Region.take.id # Por implementar
+      r = Sivel2Gen::Region::calcula_de_depmun(
+        self.ubicacionpre_departamento_id,
+        self.ubicacionpre_municipio_id
+      )
+      return r ? r.id : nil
     end
 
 

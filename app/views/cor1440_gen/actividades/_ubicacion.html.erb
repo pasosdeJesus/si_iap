@@ -29,4 +29,12 @@
 } %>
 
 
-<!--%= f.input :region, :readonly %-->
+<%= f.input :region, 
+  disabled: true,
+  include_blank: true,
+  collection: Sivel2Gen::Region.all,
+  selected: f.object.region_id,
+  label_method: :presenta_nombre,
+  input_html: {
+  }
+%>
