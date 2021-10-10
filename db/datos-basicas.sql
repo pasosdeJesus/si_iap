@@ -216,3 +216,73 @@ INSERT INTO public.gradoimpacto (id, nombre,
   '2021-09-21', '2021-09-21', '2021-09-21');
 
 SELECT pg_catalog.setval('public.gradoimpacto_id_seq', 100, true);
+
+
+INSERT INTO public.sip_tipoorg (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  1, 'ORGANIZACIÓN SOCIAL ACOMPAÑADA',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+INSERT INTO public.sip_tipoorg (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  2, 'ORGANIZACIÓN SOCIAL (NO ACOMPAÑADA)',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+INSERT INTO public.sip_tipoorg (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  3, 'INSTITUCIÓN CIVIL',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+INSERT INTO public.sip_tipoorg (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  4, 'FUERZA PÚBLICA',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+INSERT INTO public.sip_tipoorg (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  5, 'ORGANISMOS INTERNACIONALES',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+SELECT setval('public.sip_tipoorg_id_seq', 100);
+
+
+
+INSERT INTO public.medidaproteccion (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  1, 'JAC ACTIVA',
+  '2021-10-10', '2021-10-10', '2021-10-10');
+INSERT INTO public.medidaproteccion (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  2, 'JAC NO ACTIVA',
+  '2021-10-10', '2021-10-10', '2021-10-10');
+INSERT INTO public.medidaproteccion (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  3, 'RED DE DDHHH',
+  '2021-10-10', '2021-10-10', '2021-10-10');
+INSERT INTO public.medidaproteccion (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  4, 'CASA DE DDHH',
+  '2021-10-10', '2021-10-10', '2021-10-10');
+INSERT INTO public.medidaproteccion (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  5, 'CASA DE REFUGIO HUMANITARIO',
+  '2021-10-10', '2021-10-10', '2021-10-10');
+INSERT INTO public.medidaproteccion (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  6, 'RUTA DE PROTECCIÓN COLECTIVA DE LA UNP',
+  '2021-10-10', '2021-10-10', '2021-10-10');
+
+SELECT setval('public.medidaproteccion_id_seq', 100);
+
+
+
+INSERT INTO public.redyalianza (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  1, 'INSTITUCIONES',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+INSERT INTO public.redyalianza (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  2, 'CON OTRAS ORGANIZACIONES DE LA REGIÓN',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+INSERT INTO public.redyalianza (id, nombre, 
+  fechacreacion, created_at, updated_at) VALUES (
+  3, 'CON PLATAFORMAS REGIONALES Y NACIONALES',
+  '2020-08-05', '2020-08-05', '2020-08-05');
+SELECT setval('public.redyalianza_id_seq', 100);
+
+

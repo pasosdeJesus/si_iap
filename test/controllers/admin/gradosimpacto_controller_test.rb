@@ -23,15 +23,6 @@ module Admin
       sign_in @current_usuario
     end
 
-    # convieret /iap/miviap/iap/miviap/ en /iap/miviap/
-    def filtra_doble_ruta_relativa(r)
-      p = Pathname(Rails.configuration.relative_url_root) + 
-             Rails.configuration.relative_url_root.sub(/^\//, '')
-      res = r.gsub(p.to_s, Rails.configuration.relative_url_root) 
-      puts "res=#{res}"
-      return res
-    end
-
     # Cada prueba se ejecuta en una transacción
     # que después de la prueba se revierte. Por lo que no
     # debe preocuparse por restaurar/borrar lo que modifique/elimine/agregue

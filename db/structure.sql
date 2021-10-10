@@ -2757,6 +2757,40 @@ CREATE SEQUENCE public.instanciader_seq
 
 
 --
+-- Name: medidaproteccion; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.medidaproteccion (
+    id bigint NOT NULL,
+    nombre character varying(500) NOT NULL COLLATE public.es_co_utf_8,
+    observaciones character varying(5000),
+    fechacreacion date NOT NULL,
+    fechadeshabilitacion date,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: medidaproteccion_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.medidaproteccion_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: medidaproteccion_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.medidaproteccion_id_seq OWNED BY public.medidaproteccion.id;
+
+
+--
 -- Name: mr519_gen_campo; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3123,6 +3157,40 @@ CREATE SEQUENCE public.observacion_id_seq
 --
 
 ALTER SEQUENCE public.observacion_id_seq OWNED BY public.observacion.id;
+
+
+--
+-- Name: redyalianza; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.redyalianza (
+    id bigint NOT NULL,
+    nombre character varying(500) NOT NULL COLLATE public.es_co_utf_8,
+    observaciones character varying(5000),
+    fechacreacion date NOT NULL,
+    fechadeshabilitacion date,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: redyalianza_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.redyalianza_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: redyalianza_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.redyalianza_id_seq OWNED BY public.redyalianza.id;
 
 
 --
@@ -3747,6 +3815,40 @@ CREATE SEQUENCE public.sip_tema_id_seq
 --
 
 ALTER SEQUENCE public.sip_tema_id_seq OWNED BY public.sip_tema.id;
+
+
+--
+-- Name: sip_tipoorg; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.sip_tipoorg (
+    id bigint NOT NULL,
+    nombre character varying(500) NOT NULL COLLATE public.es_co_utf_8,
+    observaciones character varying(5000),
+    fechacreacion date NOT NULL,
+    fechadeshabilitacion date,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: sip_tipoorg_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.sip_tipoorg_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: sip_tipoorg_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.sip_tipoorg_id_seq OWNED BY public.sip_tipoorg.id;
 
 
 --
@@ -5554,6 +5656,13 @@ ALTER TABLE ONLY public.heb412_gen_plantillahcr ALTER COLUMN id SET DEFAULT next
 
 
 --
+-- Name: medidaproteccion id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.medidaproteccion ALTER COLUMN id SET DEFAULT nextval('public.medidaproteccion_id_seq'::regclass);
+
+
+--
 -- Name: mr519_gen_campo id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5631,6 +5740,13 @@ ALTER TABLE ONLY public.observacion ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
+-- Name: redyalianza id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.redyalianza ALTER COLUMN id SET DEFAULT nextval('public.redyalianza_id_seq'::regclass);
+
+
+--
 -- Name: sip_anexo id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5698,6 +5814,13 @@ ALTER TABLE ONLY public.sip_tdocumento ALTER COLUMN id SET DEFAULT nextval('publ
 --
 
 ALTER TABLE ONLY public.sip_tema ALTER COLUMN id SET DEFAULT nextval('public.sip_tema_id_seq'::regclass);
+
+
+--
+-- Name: sip_tipoorg id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sip_tipoorg ALTER COLUMN id SET DEFAULT nextval('public.sip_tipoorg_id_seq'::regclass);
 
 
 --
@@ -6382,6 +6505,14 @@ ALTER TABLE ONLY public.sivel2_gen_maternidad
 
 
 --
+-- Name: medidaproteccion medidaproteccion_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.medidaproteccion
+    ADD CONSTRAINT medidaproteccion_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: mr519_gen_campo mr519_gen_campo_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6523,6 +6654,14 @@ ALTER TABLE ONLY public.sivel2_gen_profesion
 
 ALTER TABLE ONLY public.sivel2_gen_rangoedad
     ADD CONSTRAINT rangoedad_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: redyalianza redyalianza_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.redyalianza
+    ADD CONSTRAINT redyalianza_pkey PRIMARY KEY (id);
 
 
 --
@@ -6731,6 +6870,14 @@ ALTER TABLE ONLY public.sip_sectororgsocial
 
 ALTER TABLE ONLY public.sip_tema
     ADD CONSTRAINT sip_tema_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: sip_tipoorg sip_tipoorg_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sip_tipoorg
+    ADD CONSTRAINT sip_tipoorg_pkey PRIMARY KEY (id);
 
 
 --
@@ -9900,6 +10047,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210922021606'),
 ('20210922031308'),
 ('20210922040729'),
-('20210924022913');
+('20210924022913'),
+('20211010164634'),
+('20211010185448'),
+('20211010185524');
 
 

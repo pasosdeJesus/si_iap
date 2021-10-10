@@ -72,12 +72,18 @@ es:
       "gradoimpacto":
          Gradoimpacto: Grado de impacto
          Gradosimpacto: Grados de impacto
+      "medidaproteccion":
+        Medidaproteccion: Medida de protección y/o seguridad
+        Medidasproteccion: Medidas de protección y/o seguridad
       "nivelorganzorc": 
         Nivelorganzorc: Nivel de organización
         Nivelesorganzorc: Niveles de organización
       "nodo":
         Nodo: Nodo
         Nodos: Nodos
+      "redyalianza": 
+        Redyalinza: Red / Alianza
+        Redesyalianzas: Redes y Alianzas
       "sip/orgsocial":
         acompanada: Acompañada por IAP
         carpeta: Carpeta en nube
@@ -90,8 +96,12 @@ es:
         tipoorganzorc: Tipo de organización formal privada
         "{:orgsocial persona=>[]}": Contactos
       "tipoorganzorc": 
-        Tipoorganzorc: Tipo de organización
-        Tiposorganzorc: Tipos de organización
+        Tipoorganzorc: Tipo de organización formal privada
+        Tiposorganzorc: Tipos de organización formal privada
+      "sip/tipoorg": 
+        Tipoorg: Tipo de organización
+        Tiposorg: Tipos de organización
+      "usuario":
       "usuario":
         tdocumento: Tipo de documento
         numerodocumento: Número de documento

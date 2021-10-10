@@ -18,9 +18,12 @@ class Ability  < Cor1440Gen::Ability
     ['', 'estadozrc'],
     ['', 'estadoobs'],
     ['', 'gradoimpacto'],
+    ['', 'medidaproteccion'],
     ['', 'nivelorganzorc'],
     ['', 'nodo'],
-    ['', 'tipoorganzorc']
+    ['', 'redyalianza'],
+    ['', 'tipoorganzorc'],
+    ['Sip', 'tipoorg']
   ]
   
   def tablasbasicas 
@@ -88,16 +91,22 @@ class Ability  < Cor1440Gen::Ability
       can [:manage], Accionorg
       can [:manage], Contexto
       can [:index,:read], Gradoimpacto
+      can [:index,:read], Medidaproteccion
       can [:index,:read], Nodo
       can [:index,:read], Observacion
+      can [:index,:read], Redyalianza
+      can [:index,:read], Sip::Tipoorg
       can [:index,:read], Zrc
 
     when Ability::ROLADMIN, Ability::ROLDIR
       can :manage, Accionorg
       can :manage, Contexto
       can :manage, Gradoimpacto
+      can :manage, Medidaproteccion 
       can :manage, Nodo
       can :manage, Observacion
+      can :manage, Redyalianza
+      can :manage, Sip::Tipoorg
       can :manage, Zrc
     end
 
