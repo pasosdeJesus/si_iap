@@ -26,7 +26,7 @@ module Sip
 
     test "existente" do
       tipoorg = Sip::Tipoorg.where(id: 1).take
-      assert_equal(tipoorg.nombre, "ORGANIZACIÓN SOCIAL ACOMPAÑADA")
+      assert_equal(tipoorg.nombre, "ORGANIZACIÓN ACOMPAÑADA")
     end
 
   end
