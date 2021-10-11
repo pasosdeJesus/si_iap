@@ -88,6 +88,8 @@ es:
         acompanada: Acompañada por IAP
         carpeta: Carpeta en nube
         medidaproteccion: Medida de proteción y/o seguridad
+        municipiotrab_ids: Municipios donde opera
+        municipiotrab: Municipios donde opera
         nit: Nit
         numasociados: Número de asociados (hombres)
         numasociadas: Número de asociadas (mujeres)
@@ -95,6 +97,8 @@ es:
         Orgsocial: Organización social
         Orgsociales: Organizaciones sociales
         redyalianza: Redes y Alianzas
+        sectororgsocial_ids: Ejes de trabajo
+        sectororgsocial: Ejes de trabajo
         tipoorg: Tipo de organización
         tipoorganzorc: Tipo de organización formal privada
         "{:orgsocial persona=>[]}": Contactos

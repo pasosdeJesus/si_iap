@@ -3455,6 +3455,16 @@ CREATE MATERIALIZED VIEW public.sip_mundep AS
 
 
 --
+-- Name: sip_municipiotrab_orgsocial; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.sip_municipiotrab_orgsocial (
+    municipiotrab_id bigint NOT NULL,
+    orgsocial_id bigint NOT NULL
+);
+
+
+--
 -- Name: sip_oficina_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -8399,6 +8409,14 @@ ALTER TABLE ONLY public.cor1440_gen_indicadorpf
 
 
 --
+-- Name: sip_municipiotrab_orgsocial fk_rails_4b604ed742; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sip_municipiotrab_orgsocial
+    ADD CONSTRAINT fk_rails_4b604ed742 FOREIGN KEY (orgsocial_id) REFERENCES public.sip_orgsocial(id);
+
+
+--
 -- Name: sip_ubicacion fk_rails_4dd7a7f238; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8788,6 +8806,14 @@ ALTER TABLE ONLY public.sip_ubicacion
 
 ALTER TABLE ONLY public.usuarionotificar_observacion
     ADD CONSTRAINT fk_rails_a2745aecdb FOREIGN KEY (observacion_id) REFERENCES public.observacion(id);
+
+
+--
+-- Name: sip_municipiotrab_orgsocial fk_rails_a2df6a06c8; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sip_municipiotrab_orgsocial
+    ADD CONSTRAINT fk_rails_a2df6a06c8 FOREIGN KEY (municipiotrab_id) REFERENCES public.sip_municipio(id);
 
 
 --
@@ -10077,6 +10103,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20211010164634'),
 ('20211010185448'),
 ('20211010185524'),
-('20211010201623');
+('20211010201623'),
+('20211011102508');
 
 

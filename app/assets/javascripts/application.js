@@ -48,6 +48,9 @@ document.addEventListener('turbolinks:load', function() {
   sivel2_gen_prepara_eventos_comunes(root);
   cor1440_gen_prepara_eventos_comunes(root);
   sivel2_gen_prepara_eventos_unicos(root);
+  
+  siiap_registra_orgsocial(root);
+
 
 
 });

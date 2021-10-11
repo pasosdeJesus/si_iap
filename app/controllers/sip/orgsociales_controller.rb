@@ -3,6 +3,11 @@ require_dependency "sip/concerns/controllers/orgsociales_controller"
 module Sip
   class OrgsocialesController < Heb412Gen::ModelosController
 
+
+    Sip::Municipio.conf_presenta_nombre_con_origen = true
+    Sip::Departamento.conf_presenta_nombre_con_origen = true
+
+
     before_action :set_orgsocial, only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource class: Sip::Orgsocial
 
@@ -38,6 +43,7 @@ module Sip
       ]
       if @registro.tipoorg == 1 || @registro.tipoorg == 2
         r += [
+          :municipiotrab_ids,
           :sectororgsocial_ids,
           :medidaproteccion,
           :redyalianza,
@@ -66,6 +72,7 @@ module Sip
       ] + [ 
         :orgsocial_persona => [] 
       ] + [
+        :municipiotrab_ids,
         :sectororgsocial_ids,
         :medidaproteccion,
         :redyalianza,
@@ -112,14 +119,17 @@ module Sip
       super(c)
     end
 
-    def new
+    def nuevo_intermedio(registro)
       @titulo = "Nueva Organización (no acompañada)"
       if params && params[:filtro] && params[:filtro][:bustipoorg_id]
-        @titulo = "Nueva " + Sip::OrgsocialesController::calcula_titulo(
-          params[:filtro][:bustipoorg_id].to_i, false)
+        t = params[:filtro][:bustipoorg_id].to_i
+        nueva = "Nueva "
+        if t == 5
+          nueva = "Nuevo "
+        end
+        @titulo = nueva + Sip::OrgsocialesController::calcula_titulo(t, false)
+        registro.tipoorg_id = (t>=1 && t<=5) ? t : 2
       end
-      new_gen
-      render layout: 'application'
     end
 
     def editar_intermedio(registro, usuario_actual_id)
@@ -142,7 +152,7 @@ module Sip
     end
 
     def lista_params 
-      atributos_form - [:grupoper, :sectororgsocial_ids] +
+      atributos_form - [:grupoper,  :municipiotrab_ids, :sectororgsocial_ids] +
         [ :zrc_id, 
           :nivelorganzorc_id,
           :medidaproteccion_id,
@@ -164,6 +174,7 @@ module Sip
               :apellidos,
             ]
           ],
+          :municipiotrab_ids => [],
           :sectororgsocial_ids => []
         ] 
     end

@@ -45,7 +45,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/sip.git
-  revision: 4f184164232c0c60167effe1970497fe5a98df5b
+  revision: 73726cae5e12e3b5eab4797386ed40793227a2df
   branch: main
   specs:
     sip (2.0.b12)
@@ -63,7 +63,7 @@ GIT
 
 GIT
   remote: https://github.com/pasosdeJesus/sivel2_gen.git
-  revision: e18505ffbaf9040802336e2f5d87cab360d53cde
+  revision: 3b875ae9420f56bf380d7af4ffe22d0443f36782
   branch: main
   specs:
     sivel2_gen (2.1a1)
@@ -249,7 +249,7 @@ GEM
     mimemagic (0.3.10)
       nokogiri (~> 1)
       rake
-    mini_mime (1.1.1)
+    mini_mime (1.1.2)
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)

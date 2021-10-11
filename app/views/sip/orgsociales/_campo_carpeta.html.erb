@@ -1,3 +1,8 @@
+<% estmostrar = 'display: none' %>
+<% if f.object.tipoorg_id == 1 || f.object.tipoorg_id == 2 %>
+  <% estmostrar = '' %>
+<% end %>
+
 <% pdir = [] 
   Dir.chdir(Rails.application.config.x.heb412_ruta.join('ZRC')) { 
   pdir = Dir.glob("./**/") } %>
@@ -6,5 +11,9 @@
   input_html: {
     "data-toggle" => 'tooltip',
     "title" => 'Carpeta dentro del carpeta ZRC de la nube, donde pondrá la información de la ZRC'
-  } %>
+  },
+  wrapper_html: {
+    style: estmostrar
+  }
+%>
 

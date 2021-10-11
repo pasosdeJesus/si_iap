@@ -1,0 +1,10 @@
+<% estmostrar = 'display: none' %>
+<% if f.object.tipoorg_id == 1 || f.object.tipoorg_id == 2 %>
+  <% estmostrar = '' %>
+<% end %>
+
+<%= f.input :numasociadas, 
+  wrapper_html: {
+    style: estmostrar
+  }
+%>

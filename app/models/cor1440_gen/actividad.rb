@@ -44,8 +44,7 @@ module Cor1440Gen
 
     def region_id
       r = Sivel2Gen::Region::calcula_de_depmun(
-        self.ubicacionpre_departamento_id,
-        self.ubicacionpre_municipio_id
+        nil, self.municipiotrab_id
       )
       return r ? r.id : nil
     end
