@@ -87,12 +87,15 @@ es:
       "sip/orgsocial":
         acompanada: Acompañada por IAP
         carpeta: Carpeta en nube
+        medidaproteccion: Medida de proteción y/o seguridad
         nit: Nit
         numasociados: Número de asociados (hombres)
         numasociadas: Número de asociadas (mujeres)
         nivelorganzorc: Nivel de organización
         Orgsocial: Organización social
         Orgsociales: Organizaciones sociales
+        redyalianza: Redes y Alianzas
+        tipoorg: Tipo de organización
         tipoorganzorc: Tipo de organización formal privada
         "{:orgsocial persona=>[]}": Contactos
       "tipoorganzorc": 

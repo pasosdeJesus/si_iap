@@ -15,7 +15,6 @@ module Sip
     def atributos_index
       [ :id, 
         :grupoper_id,
-        :acompanada,
         :telefono, 
         :web,
         :direccion
@@ -27,32 +26,39 @@ module Sip
     end
 
     def atributos_show
-      [ :id, 
+      r = [ :id, 
         :grupoper_id,
-        :acompanada,
+        :tipoorg,
         :telefono, 
         :web,
         :fax,
         :direccion
       ] + [ 
         :orgsocial_persona => [] 
-      ] + [
-        :sectororgsocial_ids,
-        :zrc,
-        :nivelorganzorc,
-        :tipoorganzorc,
-        :nit,
-        :numasociados,
-        :numasociadas,
-        :carpeta
-      ] + [
+      ]
+      if @registro.tipoorg == 1 || @registro.tipoorg == 2
+        r += [
+          :sectororgsocial_ids,
+          :medidaproteccion,
+          :redyalianza,
+          :zrc,
+          :nivelorganzorc,
+          :tipoorganzorc,
+          :nit,
+          :numasociados,
+          :numasociadas,
+          :carpeta
+        ]
+      end
+      r += [
         :fechadeshabilitacion_localizada
       ]
+      return r
     end
 
     def atributos_form
       [ :grupoper,
-        :acompanada,
+        :tipoorg,
         :telefono, 
         :web,
         :fax,
@@ -61,6 +67,8 @@ module Sip
         :orgsocial_persona => [] 
       ] + [
         :sectororgsocial_ids,
+        :medidaproteccion,
+        :redyalianza,
         :zrc,
         :nivelorganzorc,
         :tipoorganzorc,
@@ -73,10 +81,73 @@ module Sip
       ]
     end
 
+    def self.calcula_titulo(tipoorg_id, plural=true)
+      if !plural && tipoorg_id>=1 && tipoorg_id<=5
+        return Sip::Tipoorg.find(tipoorg_id).nombre.capitalize
+      end
+      case tipoorg_id
+      when 1
+        return 'Organizaciones acompañadas'
+      when 2
+        return 'Organizaciones (no acompañadas)'
+      when 3
+        return 'Instituciones civiles'
+      when 4
+        return 'Fuerza pública'
+      when 5
+        return 'Organismos internacionales'
+      end
+      return "Orgsocial desconocida"
+    end
+
+    def index
+      c = Sip::Orgsocial.all
+      if params && params[:filtro] && params[:filtro][:bustipoorg_id]
+        c = c.where(
+          tipoorg_id: params[:filtro][:bustipoorg_id].to_i
+        )
+        @titulo = Sip::OrgsocialesController::calcula_titulo(
+          params[:filtro][:bustipoorg_id].to_i, true)
+      end
+      super(c)
+    end
+
+    def new
+      @titulo = "Nueva Organización (no acompañada)"
+      if params && params[:filtro] && params[:filtro][:bustipoorg_id]
+        @titulo = "Nueva " + Sip::OrgsocialesController::calcula_titulo(
+          params[:filtro][:bustipoorg_id].to_i, false)
+      end
+      new_gen
+      render layout: 'application'
+    end
+
+    def editar_intermedio(registro, usuario_actual_id)
+      @titulo = "Editar Organización (no acompañada)"
+      if registro.tipoorg
+        @titulo = "Editar " + Sip::OrgsocialesController::calcula_titulo(
+          registro.tipoorg.id, false)
+      end
+
+      return true
+    end
+
+
+    def presentar_intermedio(registro, usuario_actual_id)
+      @titulo = "Organización (no acompañada)"
+      if registro.tipoorg
+        @titulo = Sip::OrgsocialesController::calcula_titulo(
+          registro.tipoorg.id, false)
+      end
+    end
+
     def lista_params 
-      atributos_form - [:grupoper] +
+      atributos_form - [:grupoper, :sectororgsocial_ids] +
         [ :zrc_id, 
           :nivelorganzorc_id,
+          :medidaproteccion_id,
+          :redyalianza_id,
+          :tipoorg_id,
           :tipoorganzorc_id,
           :grupoper_attributes => [
             :id,
@@ -92,7 +163,8 @@ module Sip
               :nombres,
               :apellidos,
             ]
-          ]
+          ],
+          :sectororgsocial_ids => []
         ] 
     end
 

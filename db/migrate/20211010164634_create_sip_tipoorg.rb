@@ -13,11 +13,11 @@ class CreateSipTipoorg < ActiveRecord::Migration[6.1]
     execute <<-SQL
       INSERT INTO sip_tipoorg (id, nombre, 
         fechacreacion, created_at, updated_at) VALUES (
-        1, 'ORGANIZACIÓN SOCIAL ACOMPAÑADA',
+        1, 'ORGANIZACIÓN ACOMPAÑADA',
         '2020-08-05', '2020-08-05', '2020-08-05');
       INSERT INTO sip_tipoorg (id, nombre, 
         fechacreacion, created_at, updated_at) VALUES (
-        2, 'ORGANIZACIÓN SOCIAL (NO ACOMPAÑADA)',
+        2, 'ORGANIZACIÓN (NO ACOMPAÑADA)',
         '2020-08-05', '2020-08-05', '2020-08-05');
       INSERT INTO sip_tipoorg (id, nombre, 
         fechacreacion, created_at, updated_at) VALUES (
@@ -29,7 +29,7 @@ class CreateSipTipoorg < ActiveRecord::Migration[6.1]
         '2020-08-05', '2020-08-05', '2020-08-05');
       INSERT INTO sip_tipoorg (id, nombre, 
         fechacreacion, created_at, updated_at) VALUES (
-        5, 'ORGANISMOS INTERNACIONALES',
+        5, 'ORGANISMO INTERNACIONAL',
         '2020-08-05', '2020-08-05', '2020-08-05');
       SELECT setval('sip_tipoorg_id_seq', 100);
     SQL

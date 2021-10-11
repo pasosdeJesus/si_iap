@@ -47,23 +47,28 @@
           cor1440_gen.mindicadorespf_path, desplegable: true %>
       <% end %>
       <%= despliega_abajo 'Contexto' do %>
-        <%= opcion_menu 'Organizaciones acompañadas', '#',
+        <%= opcion_menu 'Organizaciones acompañadas', 
+          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=1",
           desplegable: true %>
         <%= opcion_menu 'Acciones de organizaciones acompañadas', 
           main_app.accionesorg_path, desplegable: true %>
-        <%= opcion_menu 'Organizaciones sociales',
-          '#', desplegable: true %>
+        <%= opcion_menu 'Organizaciones (no acompañadas)',
+          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=2",
+          desplegable: true %>
         <%= opcion_menu 'Coyunturas regionales', main_app.contextos_path,
           desplegable: true %>
         <%= opcion_menu 'ZRC', main_app.zrcs_path,
           desplegable: true %>
       <% end %>
       <%= despliega_abajo 'Directorio' do %>
-        <%= opcion_menu 'Instituciones civiles', '#',
+        <%= opcion_menu 'Instituciones civiles', 
+          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=3",
           desplegable: true %>
-        <%= opcion_menu 'Fuerza Pública', '#',
+        <%= opcion_menu 'Fuerza Pública',
+          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=4",
           desplegable: true %>
-        <%= opcion_menu 'Organismos internacionales',  '#',
+        <%= opcion_menu 'Organismos internacionales',
+          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=5",
           desplegable: true %>
       <% end %>
     <% end %>

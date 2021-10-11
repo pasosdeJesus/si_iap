@@ -1,0 +1,6 @@
+<% e = modelos_path(@registro) %>
+<% if @registro.tipoorg %>
+  <% e += "?filtro[bustipoorg_id]=#{@registro.tipoorg.id}" %>
+<% end %>
+<%= link_to t('.back', :default => t("helpers.links.back")), 
+  e, :class => 'btn'  %>

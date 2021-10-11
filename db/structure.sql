@@ -3504,7 +3504,9 @@ CREATE TABLE public.sip_orgsocial (
     carpeta character varying(5000),
     tipoorganzorc_id integer,
     nivelorganzorc_id integer,
-    acompanada boolean
+    tipoorg_id integer DEFAULT 2 NOT NULL,
+    medidaproteccion_id integer,
+    redyalianza_id integer
 );
 
 
@@ -8573,6 +8575,14 @@ ALTER TABLE ONLY public.cor1440_gen_pmindicadorpf
 
 
 --
+-- Name: sip_orgsocial fk_rails_722b19abd0; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sip_orgsocial
+    ADD CONSTRAINT fk_rails_722b19abd0 FOREIGN KEY (redyalianza_id) REFERENCES public.redyalianza(id);
+
+
+--
 -- Name: cor1440_gen_efecto_orgsocial fk_rails_72ba94182e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9029,6 +9039,14 @@ ALTER TABLE ONLY public.cor1440_gen_plantillahcm_proyectofinanciero
 
 
 --
+-- Name: sip_orgsocial fk_rails_da08cf875b; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sip_orgsocial
+    ADD CONSTRAINT fk_rails_da08cf875b FOREIGN KEY (tipoorg_id) REFERENCES public.sip_tipoorg(id);
+
+
+--
 -- Name: cor1440_gen_informe fk_rails_daf0af8605; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9042,6 +9060,14 @@ ALTER TABLE ONLY public.cor1440_gen_informe
 
 ALTER TABLE ONLY public.cor1440_gen_proyectofinanciero_usuario
     ADD CONSTRAINT fk_rails_dc664c3eaf FOREIGN KEY (usuario_id) REFERENCES public.usuario(id);
+
+
+--
+-- Name: sip_orgsocial fk_rails_dcc54d7f50; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sip_orgsocial
+    ADD CONSTRAINT fk_rails_dcc54d7f50 FOREIGN KEY (medidaproteccion_id) REFERENCES public.medidaproteccion(id);
 
 
 --
@@ -10050,6 +10076,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210924022913'),
 ('20211010164634'),
 ('20211010185448'),
-('20211010185524');
+('20211010185524'),
+('20211010201623');
 
 
