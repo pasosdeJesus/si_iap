@@ -1,7 +1,10 @@
-<% estmostrar = 'display: none' %>
-<% if forgsocial && forgsocial.object && forgsocial.object.tipoorg && 
-    (forgsocial.object.tipoorg_id == 1 || forgsocial.object.tipoorg_id == 2) %>
-  <% estmostrar = '' %>
+<% estmostrar = '' %>
+<% if defined?(@registro) && @registro.class.to_s == 'Sip::Orgsocial' %>
+  <% estmostrar = 'display: none' %>
+  <% if @registro.tipoorg && 
+      (@registro.tipoorg_id == 1 || @registro.tipoorg_id == 2) %>
+    <% estmostrar = '' %>
+  <% end %>
 <% end %>
 <div class="input string estorganizacion" style="<%= estmostrar %>" >
   <label class="string control-label">Casos en los que aparece: </label>
