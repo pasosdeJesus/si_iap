@@ -8,7 +8,7 @@ function siiap_registra_orgsocial(root) {
   const orgsocialmun = document.getElementById('orgsocial_municipiotrab_ids');
 
   if (orgsocialmun != null) {
-    orgsocialmun.addEventListener('change', (event) => {
+    $(orgsocialmun).on('change', (evento, params) => {
       mun = document.getElementById('orgsocial_municipiotrab_ids').value;
       params = {
         departamento_id: null,
