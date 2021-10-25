@@ -35,17 +35,18 @@ module Sip
       r = [ :id, 
         :grupoper_id,
         :tipoorg,
-        #:region_id,
+        :region,
         :telefono, 
         :web,
         :fax,
         :direccion
       ] + [ 
         :orgsocial_persona => [] 
+      ] + [
+        :municipiotrab_ids,
       ]
       if @registro.tipoorg == 1 || @registro.tipoorg == 2
         r += [
-          :municipiotrab_ids,
           :sectororgsocial_ids,
           :medidaproteccion,
           :redyalianza,
