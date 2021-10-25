@@ -1,0 +1,3 @@
+<% if registro.municipiotrab_ids.count > 0 && registro.region_id %>
+  <%= Sivel2Gen::Region.find(registro.region_id).presenta_nombre %>
+<% end %>

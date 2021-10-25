@@ -6,6 +6,8 @@ module Sip
 
     attr_accessor :region_id
 
+    attr_accessor :bustipoorg_id
+
     belongs_to :zrc, optional: true
     belongs_to :nivelorganzorc, optional: true
     belongs_to :tipoorg, class_name: 'Sip::Tipoorg',
@@ -19,15 +21,12 @@ module Sip
       foreign_key: 'region_id', 
       optional: true
 
-
     has_and_belongs_to_many :municipiotrab, 
       class_name: 'Sip::Municipio',
       foreign_key: "orgsocial_id", 
       validate: true, 
       association_foreign_key: "municipiotrab_id",
       join_table: 'sip_municipiotrab_orgsocial'
-
-
 
     def region_id
       r = nil
@@ -40,9 +39,14 @@ module Sip
       return r ? r.id : nil
     end
 
-
     validates :nit, length: { maximum: 500 }
     validates :carpeta, length: { maximum: 5000 }
+
+    scope :filtro_region, lambda { |r|
+      where("sip_orgsocial.id IN (SELECT orgsocial_id FROM
+            sip_municipiotrab_orgsocial WHERE
+            region_de_depmun(NULL, municipiotrab_id::integer)=?)", r)
+    }
 
   end
 end

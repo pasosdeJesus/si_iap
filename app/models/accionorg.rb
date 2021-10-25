@@ -27,7 +27,6 @@ class Accionorg < ActiveRecord::Base
   validates :nombre, length: { maximum: 1024}, presence: true
   validates :descripcion, length: {maximum: 5000}
 
-
   def presenta_nombre
     "#{nombre}"
   end

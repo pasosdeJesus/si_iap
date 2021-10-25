@@ -20,6 +20,7 @@ module Sip
     def atributos_index
       [ :id, 
         :grupoper_id,
+        :region,
         :telefono, 
         :web,
         :direccion
@@ -34,6 +35,7 @@ module Sip
       r = [ :id, 
         :grupoper_id,
         :tipoorg,
+        #:region_id,
         :telefono, 
         :web,
         :fax,
