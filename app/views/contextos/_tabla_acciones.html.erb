@@ -1,0 +1,25 @@
+<% if defined?(registro) && 
+    registro.region && registro.fechaini && registro.fechafin %>
+  <% acciones = Cor1440Gen::Actividad.where(
+    'region_de_actividad(id)=?', 
+    registro.region_id).
+    where('fecha>=? AND fecha<=?', registro.fechaini, registro.fechafin).
+    order(:fecha) %>
+
+  <table class='table table-striped'>
+    <thead>
+      <tr><th>Tipo de acción</th><th>Id</th><th>Fecha<th>Titulo</th></tr>
+    </thead>
+    <tbody>
+      <% acciones.each do |a| %>
+        <tr>
+          <td><%= a.id %></td>
+          <td><%= link_to a.id, cor1440_gen.actividad_path(a.id), 
+            target: '_blank' %></td>
+          <td><%= a.fecha %></td>
+          <td><%= a.nombre %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

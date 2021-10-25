@@ -1,0 +1,30 @@
+<% if defined?(registro) && 
+    registro.region && registro.fechaini && registro.fechafin %>
+
+  <% casos = Sivel2Gen::Caso.where(
+    'region_de_caso(id)=?', 
+    registro.region_id).
+    where('fecha>=? AND fecha<=?', registro.fechaini, registro.fechafin).
+    order(:fecha) %>
+
+  <table class='table table-striped'>
+    <thead>
+      <tr><th>Id</th><th>Fecha<th>Ubicacion</th><th>P. Responsables</th><th>Tipificacion</th><th>Victimas</th><th>Titulo</th></tr>
+    </thead>
+    <tbody>
+      <% casos.each do |c| %>
+        <tr>
+          <td><%= link_to c.id, sivel2_gen.caso_path(c.id), 
+            target: '_blank' %></td>
+          <td><%= c.fecha_localizada %></td>
+          <td><%= c.ubicacion_id ? 
+            c.ubicacionprincipal.presenta_nombre(sin_pais: true) : '' %></td> <td><%= c.presenta('presponsables') %></td>
+          <td><%= c.presenta('tipificacion') %></td>
+          <td><%= c.presenta('victimas') %></td>
+          <td><%= c.titulo %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>

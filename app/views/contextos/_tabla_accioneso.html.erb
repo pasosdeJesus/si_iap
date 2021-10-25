@@ -1,0 +1,25 @@
+<% if defined?(registro) && 
+    registro.region && registro.fechaini && registro.fechafin %>
+  <% accioneso = ::Accionorg.#where(
+    #'region_de_accionorg(id)=?', 
+    #registro.region_id).
+    where('fecha>=? AND fecha<=?', registro.fechaini, registro.fechafin).
+    order(:fecha) %>
+
+  <table class='table table-striped'>
+    <thead>
+      <tr><th>Tipo de acción</th><th>Id</th><th>Fecha<th>Titulo</th></tr>
+    </thead>
+    <tbody>
+      <% accioneso.each do |a| %>
+        <tr>
+          <td><%= a.id %></td>
+          <td><%= link_to a.id, accionorg_path(a.id), 
+            target: '_blank' %></td>
+          <td><%= a.fecha %></td>
+          <td><%= a.nombre %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

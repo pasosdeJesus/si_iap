@@ -15,7 +15,8 @@ class ContextosController < Sip::ModelosController
       :nombre, 
       :region_id, 
       :fechaini_localizada,
-      :fechafin_localizada
+      :fechafin_localizada,
+      :numorg
     ]
   end
 
@@ -25,14 +26,22 @@ class ContextosController < Sip::ModelosController
       :region_id, 
       :fechaini_localizada,
       :fechafin_localizada,
+      :listadoorg,
+      :listadoorgna,
+      :listadoorgint,
       :politicoelectoral,
       :social,
+      :listadoorgcivil,
+      :listadoorgfp,
       :megaproyectosempresas,
       :economiainfraestructura,
       :figurasterritoriales,
       :recursosambientales,
+      :listadocasos,
       :estructurasarmadas,
-      :estadoacuerdo
+      :estadoacuerdo,
+      :listadoacciones,
+      :listadoaccioneso
     ]
   end
 
@@ -42,15 +51,23 @@ class ContextosController < Sip::ModelosController
       :nombre, 
       :region_id, 
       :fechaini_localizada,
-      :fechafin_lcoalizada,
+      :fechafin_localizada,
+      :listadoorg,
+      :listadoorgna,
+      :listadoorgint,
       :politicoelectoral,
       :social,
+      :listadoorgcivil,
+      :listadoorgfp,
       :megaproyectosempresas,
       :economiainfraestructura,
       :figurasterritoriales,
       :recursosambientales,
+      :listadocasos,
       :estructurasarmadas,
-      :estadoacuerdo
+      :estadoacuerdo,
+      :listadoacciones,
+      :listadoaccioneso
     ]
   end
 

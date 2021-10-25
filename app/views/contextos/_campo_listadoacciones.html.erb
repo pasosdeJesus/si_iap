@@ -1,0 +1,12 @@
+<% if !defined?(registro) %>
+  <% registro = @registro %>
+<% end %>
+
+<div class='enctabla'>
+  <%= ::Contexto.human_attribute_name(:listadoacciones) %>
+</div>
+<div class="overflow-auto" style='height: 8em'>
+  <%= render partial: 'tabla_acciones', 
+    locals: {registro: registro}
+  %>
+</div>

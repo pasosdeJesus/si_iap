@@ -58,10 +58,50 @@ CREATE FUNCTION public.f_unaccent(text) RETURNS text
 
 
 --
--- Name: region_de_depmun(integer, integer); Type: FUNCTION; Schema: public; Owner: -
+-- Name: region_de_actividad(bigint); Type: FUNCTION; Schema: public; Owner: -
 --
 
-CREATE FUNCTION public.region_de_depmun(pdepartamento_id integer, pmunicipio_id integer) RETURNS integer
+CREATE FUNCTION public.region_de_actividad(pactividad_id bigint) RETURNS bigint
+    LANGUAGE plpgsql
+    AS $$
+      BEGIN
+        RETURN region_de_depmun(
+          (SELECT u.departamento_id FROM cor1440_gen_actividad AS a
+            LEFT JOIN sip_ubicacionpre AS u ON a.ubicacionpre_id=u.id
+            WHERE a.id=pactividad_id),
+          (SELECT u.municipio_id FROM cor1440_gen_actividad AS a
+            LEFT JOIN sip_ubicacionpre AS u ON a.ubicacionpre_id=u.id
+            WHERE a.id=pactividad_id)
+        );
+      END; 
+      $$;
+
+
+--
+-- Name: region_de_caso(bigint); Type: FUNCTION; Schema: public; Owner: -
+--
+
+CREATE FUNCTION public.region_de_caso(pcaso_id bigint) RETURNS bigint
+    LANGUAGE plpgsql
+    AS $$
+      BEGIN
+        RETURN region_de_depmun(
+          (SELECT u.id_departamento FROM sivel2_gen_caso AS c
+            LEFT JOIN sip_ubicacion AS u ON c.id=u.id_caso 
+            WHERE c.id=pcaso_id),
+          (SELECT u.id_municipio FROM sivel2_gen_caso AS c
+            LEFT JOIN sip_ubicacion AS u ON c.id=u.id_caso 
+            WHERE c.id=pcaso_id)
+        );
+      END; 
+      $$;
+
+
+--
+-- Name: region_de_depmun(bigint, bigint); Type: FUNCTION; Schema: public; Owner: -
+--
+
+CREATE FUNCTION public.region_de_depmun(pdepartamento_id bigint, pmunicipio_id bigint) RETURNS bigint
     LANGUAGE plpgsql
     AS $$
       BEGIN
@@ -85,6 +125,20 @@ CREATE FUNCTION public.region_de_depmun(pdepartamento_id integer, pmunicipio_id 
          ELSE
            NULL
          END;
+      END; 
+      $$;
+
+
+--
+-- Name: region_de_orgsocial(bigint); Type: FUNCTION; Schema: public; Owner: -
+--
+
+CREATE FUNCTION public.region_de_orgsocial(porgsocial_id bigint) RETURNS bigint
+    LANGUAGE plpgsql
+    AS $$
+      BEGIN
+        RETURN region_de_depmun(NULL, (SELECT MIN(municipiotrab_id) 
+          FROM sip_municipiotrab_orgsocial WHERE orgsocial_id=porgsocial_id));
       END; 
       $$;
 

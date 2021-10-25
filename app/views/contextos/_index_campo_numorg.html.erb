@@ -1,0 +1,15 @@
+<% cuenta = 0 %>
+<% if !defined?(registro) %>
+  <% registro = @registro %>
+<% end %>
+
+<% if registro.region %>
+  <% os = Sip::Orgsocial.where(
+    'region_de_orgsocial(id)=?', 
+    registro.region_id).where(tipoorg_id: Sip::Tipoorg::ORGACOMP) %>
+  <% oos = Sip::Orgsocial.where(
+    'region_de_orgsocial(id)=?', 
+    registro.region_id).where(tipoorg_id: Sip::Tipoorg::ORGNOACOMP) %>
+  <% cuenta = os.count + oos.count %>
+<% end %>
+<%= cuenta %>

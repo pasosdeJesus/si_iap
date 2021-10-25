@@ -2,7 +2,7 @@ class FuncionRegionDeDepmun < ActiveRecord::Migration[6.1]
   def up
     execute <<-SQL
       CREATE OR REPLACE FUNCTION public.region_de_depmun(
-        pdepartamento_id integer, pmunicipio_id integer) RETURNS integer
+        pdepartamento_id bigint, pmunicipio_id bigint) RETURNS bigint
       LANGUAGE plpgsql
       AS $$
       BEGIN
@@ -28,12 +28,58 @@ class FuncionRegionDeDepmun < ActiveRecord::Migration[6.1]
          END;
       END; 
       $$;
+
+      CREATE OR REPLACE FUNCTION public.region_de_orgsocial(
+        porgsocial_id bigint) RETURNS bigint
+      LANGUAGE plpgsql
+      AS $$
+      BEGIN
+        RETURN region_de_depmun(NULL, (SELECT MIN(municipiotrab_id) 
+          FROM sip_municipiotrab_orgsocial WHERE orgsocial_id=porgsocial_id));
+      END; 
+      $$;
+
+      CREATE OR REPLACE FUNCTION public.region_de_caso(
+        pcaso_id bigint) RETURNS bigint
+      LANGUAGE plpgsql
+      AS $$
+      BEGIN
+        RETURN region_de_depmun(
+          (SELECT u.id_departamento FROM sivel2_gen_caso AS c
+            LEFT JOIN sip_ubicacion AS u ON c.id=u.id_caso 
+            WHERE c.id=pcaso_id),
+          (SELECT u.id_municipio FROM sivel2_gen_caso AS c
+            LEFT JOIN sip_ubicacion AS u ON c.id=u.id_caso 
+            WHERE c.id=pcaso_id)
+        );
+      END; 
+      $$;
+
+      CREATE OR REPLACE FUNCTION public.region_de_actividad(
+        pactividad_id bigint) RETURNS bigint
+      LANGUAGE plpgsql
+      AS $$
+      BEGIN
+        RETURN region_de_depmun(
+          (SELECT u.departamento_id FROM cor1440_gen_actividad AS a
+            LEFT JOIN sip_ubicacionpre AS u ON a.ubicacionpre_id=u.id
+            WHERE a.id=pactividad_id),
+          (SELECT u.municipio_id FROM cor1440_gen_actividad AS a
+            LEFT JOIN sip_ubicacionpre AS u ON a.ubicacionpre_id=u.id
+            WHERE a.id=pactividad_id)
+        );
+      END; 
+      $$;
+
     SQL
   end
 
   def down
     execute <<-SQL
-      DROP FUNCTION public.region_de_depmun;
+      DROP FUNCTION IF EXISTS public.region_de_actividad;
+      DROP FUNCTION IF EXISTS public.region_de_caso;
+      DROP FUNCTION IF EXISTS public.region_de_orgsocial;
+      DROP FUNCTION IF EXISTS public.region_de_depmun;
     SQL
   end
 end

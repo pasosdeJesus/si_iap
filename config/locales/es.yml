@@ -7,23 +7,34 @@ es:
     proyectos: Aspectos Programáticos
   activerecord:
     attributes:
-      "accionesorg":
+      "accionorg":
         anexos: Anexos
         fecha_localizada: Fecha
         descripción: Descripción
         hombres: Número de hombres
         mujeres: Número de mujeres
         nombre: Nombre
-        orgsocial_ids: Organizaciones sociales
+        orgsocial_ids: Organización social
         otros: Número de otros
+        Accionesorg: Acciones de organizaciones
+        Accionorg: Acción de organización
       "contexto":
-        region_id: Región
-        region: Región
         fechaini: Fecha inicial
         fechaini_localizada: Fecha inicial
         fechafin: Fecha final
         fechafin_localizada: Fecha final
+        listadoacciones: Acciones de IAP
+        listadoaccioneso: Acciones de Otras organizaciones
+        listadocasos: Casos
+        listadociviles: Instituciones Civiles
+        listadofp: Fuerza Pública
+        listadoint: Organismos Internacionales
+        listadoorg: Organizaciones acompañadas
+        listadoorgna: Organizaciones no acompañadas
+        numorg: Núm. Organizaciones
         politicoelectoral: Político electoral
+        region_id: Región
+        region: Región
         social: Social
         megaproyectosempresas: Megraproyectos y empresas
         economiainfraestructura: Economía e infraestructura
