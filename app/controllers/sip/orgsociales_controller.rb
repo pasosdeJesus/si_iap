@@ -168,13 +168,15 @@ module Sip
             :anotaciones ],
           :orgsocial_persona_attributes => [
             :id,
-            :perfilorgsocial_id,
+            :cargo,
             :correo,
+            :perfilorgsocial_id,
             :_destroy,
             :persona_attributes => [
               :id,
               :nombres,
               :apellidos,
+              :sexo,
             ]
           ],
           :municipiotrab_ids => [],
