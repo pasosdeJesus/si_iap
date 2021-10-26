@@ -1,12 +1,14 @@
-# encoding: UTF-8
 require 'cor1440_gen/concerns/controllers/pmsindicadorpf_controller'
 
 module Cor1440Gen
   class PmsindicadorpfController < ApplicationController
   include Cor1440Gen::Concerns::Controllers::PmsindicadorpfController
 
+    # Autorización en función
+  
     # GET /pmsindicadorpf/new
     def new
+      authorize! :new, Cor1440Gen::Mindicadorpf
       if params[:mindicadorpf_id] && Cor1440Gen::Mindicadorpf.where(id: params[:mindicadorpf_id].to_i).count == 1
         mind = Cor1440Gen::Mindicadorpf.find(params[:mindicadorpf_id].to_i)
         fini = Date.today

@@ -3,13 +3,11 @@ require_dependency "sip/concerns/controllers/orgsociales_controller"
 module Sip
   class OrgsocialesController < Heb412Gen::ModelosController
 
+    before_action :set_orgsocial, only: [:show, :edit, :update, :destroy]
+    load_and_authorize_resource class: Sip::Orgsocial
 
     Sip::Municipio.conf_presenta_nombre_con_origen = true
     Sip::Departamento.conf_presenta_nombre_con_origen = true
-
-
-    before_action :set_orgsocial, only: [:show, :edit, :update, :destroy]
-    load_and_authorize_resource class: Sip::Orgsocial
 
     include Sip::Concerns::Controllers::OrgsocialesController
 
