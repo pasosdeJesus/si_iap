@@ -7,7 +7,7 @@ class Observacion < ActiveRecord::Base
     association_foreign_key: 'usuarionotificar_id',
     join_table: 'usuarionotificar_observacion'
   belongs_to :usuario, foreign_key: 'usuario_id', dependent: :destroy,
-    class_name: 'Usuario'
+    class_name: 'Usuario', optional: false
   belongs_to :estadoobs, foreign_key: "estado_id", validate: true,
     class_name: "Estadoobs", optional: true
 end

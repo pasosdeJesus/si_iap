@@ -2,7 +2,8 @@ class Contexto < ActiveRecord::Base
 	include Sip::Modelo
   include Sip::Localizacion
 
-  belongs_to :region, class_name: 'Sivel2Gen::Region', foreign_key: 'region_id'
+  belongs_to :region, class_name: 'Sivel2Gen::Region', 
+    foreign_key: 'region_id', optional: false
 
   campofecha_localizado :fechaini
   campofecha_localizado :fechafin
