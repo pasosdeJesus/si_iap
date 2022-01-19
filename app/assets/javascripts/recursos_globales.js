@@ -35,10 +35,9 @@ function siiap_actualiza_region() {
     'No pudo obtener region del departamento y municipio.')
 }
 
-document.addEventListener('turbolinks:load', function() {
+document.addEventListener('turbo:load', function() {
   var root;
-  root = typeof exports !== "undefined" && exports !== null ? 
-    exports : window;
+  root = window;
 
   sip_prepara_eventos_comunes(root, false, false);
   sip_ubicacionpre_expandible_registra('actividad_', 'ubicacionpre', root,

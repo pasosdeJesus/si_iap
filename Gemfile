@@ -8,6 +8,8 @@ gem 'bcrypt'
 
 gem 'bigdecimal'
 
+gem 'babel-transpiler'
+
 gem 'bootsnap', '>=1.1.0', require: false
 
 gem 'cancancan'
@@ -56,6 +58,10 @@ gem 'sassc-rails' # CSS
 gem 'simple_form' # Formularios simples 
 
 gem 'sprockets-rails'
+
+gem 'stimulus-rails'
+
+gem 'turbo-rails'
 
 gem 'tiny-color-rails'
 

@@ -143,6 +143,10 @@ GEM
     apexcharts (0.1.11)
       dry-schema (~> 1.5)
       smart_kv (~> 0.2.8)
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     bcrypt (3.1.16)
     bigdecimal (3.1.1)
     bindex (0.8.1)
@@ -352,6 +356,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stimulus-rails (1.0.2)
+      railties (>= 6.0.0)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
     thor (1.2.1)
@@ -359,6 +365,8 @@ GEM
     tiny-color-rails (0.0.2)
       railties (>= 3.0)
     ttfunk (1.7.0)
+    turbo-rails (7.1.1)
+      rails (>= 6.0.0)
     twitter_cldr (6.11.0)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.1)
@@ -388,6 +396,7 @@ PLATFORMS
 
 DEPENDENCIES
   apexcharts
+  babel-transpiler
   bcrypt
   bigdecimal
   bootsnap (>= 1.1.0)
@@ -428,7 +437,9 @@ DEPENDENCIES
   sivel2_gen!
   spring
   sprockets-rails
+  stimulus-rails
   tiny-color-rails
+  turbo-rails
   twitter_cldr
   tzinfo
   unicorn
