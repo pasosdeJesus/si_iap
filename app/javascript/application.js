@@ -32,6 +32,25 @@ var L = require('leaflet');
 var mc= require('leaflet.markercluster');
 
 
+function siiap_actualiza_region_retrollamada(root, res) {
+  document.getElementById('actividad_region').value = res.region_id
+}
+
+function siiap_actualiza_region() {
+  dep = document.getElementById('actividad_ubicacionpre_departamento_id').value;
+  mun = document.getElementById('actividad_ubicacionpre_municipio_id').value;
+  params = {
+    departamento_id: dep,
+    municipio_id: mun
+  }
+  sip_funcion_tras_AJAX('regiones/de_depmun', params, 
+    siiap_actualiza_region_retrollamada, 
+    'No pudo obtener region del departamento y municipio.')
+}
+
+import {AutocompletaAjaxExpreg} from '@pasosdejesus/autocompleta_ajax'
+window.AutocompletaAjaxExpreg = AutocompletaAjaxExpreg
+
 let esperarRecursosSprocketsYDocumento = function (resolver) {
   if (typeof window.puntomontaje == 'undefined') {
     setTimeout(esperarRecursosSprocketsYDocumento, 100, resolver)
@@ -52,8 +71,18 @@ let promesaRecursosSprocketsYDocumento = new Promise((resolver, rechazar) => {
 promesaRecursosSprocketsYDocumento.then((mensaje) => {
   console.log(mensaje)
   var root = window;
-  sip_prepara_eventos_comunes(root);
-  // Agregar más inicializaciones a continuación
+
+  sip_prepara_eventos_comunes(root, false, false);
+  sip_ubicacionpre_expandible_registra('actividad_', 'ubicacionpre', root,
+    siiap_actualiza_region, siiap_actualiza_region);
+  mr519_gen_prepara_eventos_comunes(root);
+  heb412_gen_prepara_eventos_comunes(root);
+  sivel2_gen_prepara_eventos_comunes(root);
+  cor1440_gen_prepara_eventos_comunes(root);
+  sivel2_gen_prepara_eventos_unicos(root);
+
+  siiap_registra_orgsocial(root);
+
 })
 
 
