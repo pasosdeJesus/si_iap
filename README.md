@@ -1,8 +1,6 @@
 # si_iap
 
-
-[![Revisado por Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) [![Estado Construcción](https://gitlab.com/pasosdeJesus/si_iap/badges/main/pipeline.svg)](https://gitlab.com/pasosdeJesus/si_iap/-/pipelines)[![Clima del Código](https://codeclimate.com/github/pasosdeJesus/si_iap/badges/gpa.svg)](https://codeclimate.com/github/pasosdeJesus/si_iap) [![Cobertura de Pruebas](https://codeclimate.com/github/pasosdeJesus/si_iap/badges/coverage.svg)](https://codeclimate.com/github/pasosdeJesus/si_iap) [![security](https://hakiri.io/github/pasosdeJesus/si_iap/master.svg)](https://hakiri.io/github/pasosdeJesus/si_iap/master)
-
+[![Revisado por Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) Pruebas y seguridad:[![Estado Construcción](https://gitlab.com/pasosdeJesus/si_iap/badges/main/pipeline.svg)](https://gitlab.com/pasosdeJesus/si_iap/-/pipelines?page=1&scope=all&ref=main) [![Clima del Código](https://codeclimate.com/github/pasosdeJesus/si_iap/badges/gpa.svg)](https://codeclimate.com/github/pasosdeJesus/si_iap) [![Cobertura de Pruebas](https://codeclimate.com/github/pasosdeJesus/si_iap/badges/coverage.svg)](https://codeclimate.com/github/pasosdeJesus/si_iap) 
 
 Sistema de Información de IAP
 
