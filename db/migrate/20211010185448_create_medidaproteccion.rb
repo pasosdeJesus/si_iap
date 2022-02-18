@@ -1,5 +1,5 @@
 class CreateMedidaproteccion < ActiveRecord::Migration[6.1]
-  include Sip::MigracionHelper
+  include Sip::SqlHelper
   def up
     create_table :medidaproteccion do |t|
       t.string :nombre, limit: 500, null: false

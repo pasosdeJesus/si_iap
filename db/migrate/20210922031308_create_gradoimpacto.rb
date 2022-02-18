@@ -1,6 +1,6 @@
 class CreateGradoimpacto < ActiveRecord::Migration[6.1]
 
-  include Sip::MigracionHelper
+  include Sip::SqlHelper
 
   def up
     create_table :gradoimpacto do |t|
