@@ -10,6 +10,7 @@ class ActiveSupport::TestCase
   fixtures :all
 
   protected
+
   def load_seeds
     load "#{Rails.root}/db/seeds.rb"
   end
