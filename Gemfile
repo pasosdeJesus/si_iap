@@ -119,6 +119,8 @@ group :test do
 
   gem 'capybara'
 
+  gem 'rails-controller-testing'
+
   gem 'selenium-webdriver'
 
   gem 'simplecov', '<0.18' # Debido a https://github.com/codeclimate/test-reporter/issues/418
