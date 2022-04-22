@@ -19,6 +19,8 @@ es:
         Accionesorg: Acciones de organizaciones
         Accionorg: Acción de organización
       "contexto":
+        Contexto: Coyuntura regional
+        Contextos: Coyunturas regionales
         fechaini: Fecha inicial
         fechaini_localizada: Fecha inicial
         fechafin: Fecha final
@@ -26,10 +28,10 @@ es:
         listadoacciones: Acciones de IAP
         listadoaccioneso: Acciones de Otras organizaciones
         listadocasos: Casos
-        listadociviles: Instituciones Civiles
-        listadofp: Fuerza Pública
-        listadoint: Organismos Internacionales
         listadoorg: Organizaciones acompañadas
+        listadoorgcivil: Instituciones Civiles
+        listadoorgfp: Fuerza Pública
+        listadoorgint: Organismos Internacionales
         listadoorgna: Organizaciones no acompañadas
         numorg: Núm. Organizaciones
         politicoelectoral: Político electoral
