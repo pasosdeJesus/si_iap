@@ -8,6 +8,4 @@ class AjustaOrgsocialIap2 < ActiveRecord::Migration[6.1]
     add_column :sip_orgsocial, :redyalianza_id, :integer
     add_foreign_key :sip_orgsocial, :redyalianza, column: :redyalianza_id
   end
-  def down
-  end
 end

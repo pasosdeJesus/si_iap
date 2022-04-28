@@ -218,28 +218,6 @@ INSERT INTO public.gradoimpacto (id, nombre,
 SELECT pg_catalog.setval('public.gradoimpacto_id_seq', 100, true);
 
 
-INSERT INTO public.sip_tipoorg (id, nombre, 
-  fechacreacion, created_at, updated_at) VALUES (
-  1, 'ORGANIZACIÓN ACOMPAÑADA',
-  '2020-08-05', '2020-08-05', '2020-08-05');
-INSERT INTO public.sip_tipoorg (id, nombre, 
-  fechacreacion, created_at, updated_at) VALUES (
-  2, 'ORGANIZACIÓN (NO ACOMPAÑADA)',
-  '2020-08-05', '2020-08-05', '2020-08-05');
-INSERT INTO public.sip_tipoorg (id, nombre, 
-  fechacreacion, created_at, updated_at) VALUES (
-  3, 'INSTITUCIÓN CIVIL',
-  '2020-08-05', '2020-08-05', '2020-08-05');
-INSERT INTO public.sip_tipoorg (id, nombre, 
-  fechacreacion, created_at, updated_at) VALUES (
-  4, 'FUERZA PÚBLICA',
-  '2020-08-05', '2020-08-05', '2020-08-05');
-INSERT INTO public.sip_tipoorg (id, nombre, 
-  fechacreacion, created_at, updated_at) VALUES (
-  5, 'ORGANISMO INTERNACIONAL',
-  '2020-08-05', '2020-08-05', '2020-08-05');
-SELECT setval('public.sip_tipoorg_id_seq', 100);
-
 
 
 INSERT INTO public.medidaproteccion (id, nombre, 
