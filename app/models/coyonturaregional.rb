@@ -1,4 +1,4 @@
-class Contexto < ActiveRecord::Base
+class Coyonturaregional < ActiveRecord::Base
 	include Sip::Modelo
   include Sip::Localizacion
 

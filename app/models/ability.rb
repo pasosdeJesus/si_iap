@@ -89,7 +89,7 @@ class Ability  < Cor1440Gen::Ability
       can :index, Cor1440Gen::Actividad
 
       can [:manage], Accionorg
-      can [:manage], Contexto
+      can [:manage], Coyonturaregional
       can [:index,:read], Gradoimpacto
       can [:index,:read], Medidaproteccion
       can [:index,:read], Nodo
@@ -100,7 +100,7 @@ class Ability  < Cor1440Gen::Ability
 
     when Ability::ROLADMIN, Ability::ROLDIR
       can :manage, Accionorg
-      can :manage, Contexto
+      can :manage, Coyonturaregional
       can :manage, Gradoimpacto
       can :manage, Medidaproteccion 
       can :manage, Nodo

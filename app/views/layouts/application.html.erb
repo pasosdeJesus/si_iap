@@ -46,7 +46,7 @@
         <%= opcion_menu 'Medición de indicadores', 
           cor1440_gen.mindicadorespf_path, desplegable: true %>
       <% end %>
-      <%= despliega_abajo 'Contexto' do %>
+      <%= despliega_abajo 'Coyontura regional' do %>
         <%= opcion_menu 'Organizaciones acompañadas', 
           "#{sip.orgsociales_path}?filtro[bustipoorg_id]=1",
           desplegable: true %>
@@ -55,7 +55,7 @@
         <%= opcion_menu 'Organizaciones (no acompañadas)',
           "#{sip.orgsociales_path}?filtro[bustipoorg_id]=2",
           desplegable: true %>
-        <%= opcion_menu 'Coyunturas regionales', main_app.contextos_path,
+        <%= opcion_menu 'Coyunturas regionales', main_app.coyonturasregionales_path,
           desplegable: true %>
         <%= opcion_menu 'ZRC', main_app.zrcs_path,
           desplegable: true %>

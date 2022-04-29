@@ -739,48 +739,6 @@ CREATE VIEW public.cben2 AS
 
 
 --
--- Name: contexto; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.contexto (
-    id bigint NOT NULL,
-    nombre text NOT NULL COLLATE public.es_co_utf_8,
-    region_id integer NOT NULL,
-    fechaini date NOT NULL,
-    fechafin date NOT NULL,
-    politicoelectoral text,
-    social text,
-    megaproyectosempresas text,
-    economiainfraestructura text,
-    figurasterritoriales text,
-    recursosambientales text,
-    estructurasarmadas text,
-    estadoacuerdo text,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
-);
-
-
---
--- Name: contexto_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.contexto_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: contexto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.contexto_id_seq OWNED BY public.contexto.id;
-
-
---
 -- Name: cor1440_gen_actividad; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2311,6 +2269,48 @@ CREATE SEQUENCE public.cor1440_gen_valorcampotind_id_seq
 --
 
 ALTER SEQUENCE public.cor1440_gen_valorcampotind_id_seq OWNED BY public.cor1440_gen_valorcampotind.id;
+
+
+--
+-- Name: coyonturaregional; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.coyonturaregional (
+    id bigint NOT NULL,
+    nombre text NOT NULL COLLATE public.es_co_utf_8,
+    region_id integer NOT NULL,
+    fechaini date NOT NULL,
+    fechafin date NOT NULL,
+    politicoelectoral text,
+    social text,
+    megaproyectosempresas text,
+    economiainfraestructura text,
+    figurasterritoriales text,
+    recursosambientales text,
+    estructurasarmadas text,
+    estadoacuerdo text,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: coyonturaregional_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.coyonturaregional_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: coyonturaregional_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.coyonturaregional_id_seq OWNED BY public.coyonturaregional.id;
 
 
 --
@@ -5455,13 +5455,6 @@ ALTER TABLE ONLY public.actividad_observacion ALTER COLUMN id SET DEFAULT nextva
 
 
 --
--- Name: contexto id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.contexto ALTER COLUMN id SET DEFAULT nextval('public.contexto_id_seq'::regclass);
-
-
---
 -- Name: cor1440_gen_actividad id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5711,6 +5704,13 @@ ALTER TABLE ONLY public.cor1440_gen_valorcampoact ALTER COLUMN id SET DEFAULT ne
 --
 
 ALTER TABLE ONLY public.cor1440_gen_valorcampotind ALTER COLUMN id SET DEFAULT nextval('public.cor1440_gen_valorcampotind_id_seq'::regclass);
+
+
+--
+-- Name: coyonturaregional id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.coyonturaregional ALTER COLUMN id SET DEFAULT nextval('public.coyonturaregional_id_seq'::regclass);
 
 
 --
@@ -6142,18 +6142,10 @@ ALTER TABLE ONLY public.sivel2_gen_categoria
 
 
 --
--- Name: sivel2_gen_contexto contexto_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: coyonturaregional contexto_pkey1; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.sivel2_gen_contexto
-    ADD CONSTRAINT contexto_pkey PRIMARY KEY (id);
-
-
---
--- Name: contexto contexto_pkey1; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.contexto
+ALTER TABLE ONLY public.coyonturaregional
     ADD CONSTRAINT contexto_pkey1 PRIMARY KEY (id);
 
 
@@ -6475,6 +6467,14 @@ ALTER TABLE ONLY public.cor1440_gen_valorcampoact
 
 ALTER TABLE ONLY public.cor1440_gen_valorcampotind
     ADD CONSTRAINT cor1440_gen_valorcampotind_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: sivel2_gen_contexto coyonturaregional_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sivel2_gen_contexto
+    ADD CONSTRAINT coyonturaregional_pkey PRIMARY KEY (id);
 
 
 --
@@ -9436,10 +9436,10 @@ ALTER TABLE ONLY public.cor1440_gen_formulario_mindicadorpf
 
 
 --
--- Name: contexto fk_rails_e0b95973bc; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: coyonturaregional fk_rails_e0b95973bc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.contexto
+ALTER TABLE ONLY public.coyonturaregional
     ADD CONSTRAINT fk_rails_e0b95973bc FOREIGN KEY (region_id) REFERENCES public.sivel2_gen_region(id);
 
 
@@ -10452,6 +10452,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20220417221010'),
 ('20220420143020'),
 ('20220420154535'),
-('20220422190546');
+('20220422190546'),
+('20220428145059'),
+('20220429031629');
 
 

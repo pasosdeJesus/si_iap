@@ -3,9 +3,9 @@
 <% end %>
 
 <div class='enctabla'>
-  <%= ::Contexto.human_attribute_name(:listadoorgint) %>
+  <%= ::Coyonturaregional.human_attribute_name(:listadoorgfp) %>
 </div>
 <div class="overflow-auto" style='height: 8em'>
   <%= render partial: 'tabla_orgsocial', 
-    locals: {registro: registro, tipoorg: Sip::Tipoorg::ORGINT} %>
+    locals: {registro: registro, tipoorg: Sip::Tipoorg::ORGFP} %>
 </div>

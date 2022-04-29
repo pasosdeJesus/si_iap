@@ -1,6 +1,6 @@
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'accionorg', 'accionesorg'
-  inflect.irregular 'contexto', 'contextos'
+  inflect.irregular 'coyonturaregional', 'coyonturasregionales'
   inflect.irregular 'estadoobs', 'estadosobs'
   inflect.irregular 'gradoimpacto', 'gradosimpacto'
   inflect.irregular 'medidaproteccion', 'medidasproteccion'

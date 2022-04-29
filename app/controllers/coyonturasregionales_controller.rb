@@ -1,12 +1,12 @@
-class ContextosController < Sip::ModelosController
+class CoyonturasregionalesController < Sip::ModelosController
   helper ::ApplicationHelper
 
-  before_action :set_contexto, 
+  before_action :set_coyonturaregional, 
     only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource  class: ::Contexto
+  load_and_authorize_resource  class: ::Coyonturaregional
 
   def clase 
-    "::Contexto"
+    "::Coyonturaregional"
   end
 
   def atributos_index
@@ -77,7 +77,7 @@ class ContextosController < Sip::ModelosController
   end
 
   def new_modelo_path(o)
-    return new_contexto_path()
+    return new_coyonturaregional_path()
   end
 
   def genclase
@@ -87,15 +87,15 @@ class ContextosController < Sip::ModelosController
 
   private
 
-  def set_contexto
-    @registro = @contexto = ::Contexto.find(
-      ::Contexto.connection.quote_string(params[:id]).to_i
+  def set_coyonturaregional
+    @registro = @coyonturaregional = ::Coyonturaregional.find(
+      ::Coyonturaregional.connection.quote_string(params[:id]).to_i
     )
   end
 
   # No confiar parametros a Internet, sólo permitir lista blanca
-  def contexto_params
-    params.require(:contexto).permit(*atributos_form)
+  def coyonturaregional_params
+    params.require(:coyonturaregional).permit(*atributos_form)
   end
 
 end
