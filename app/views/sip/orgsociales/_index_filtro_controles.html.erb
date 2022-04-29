@@ -1,7 +1,7 @@
 <%= f.input :bustipoorg_id, 
   as: :hidden,
   input_html: {
-    value: params[:filtro][:bustipoorg_id] ? 
+    value: params && params[:filtro] && params[:filtro][:bustipoorg_id] ? 
       params[:filtro][:bustipoorg_id] : nil
   } 
 %>
