@@ -11,9 +11,9 @@
 <tr><td rowspan="1" colspan="3">actividad-filtro-id </td></tr>
 </thead>
 <tbody>
-<tr><td>clickAt</td><td>id=navbarDropdownActividades_y_Proyectos<datalist><option>id=navbarDropdownActividades_y_Proyectos</option><option>link=Actividades y Proyectos</option><option>css=#navbarDropdownActividades_y_Proyectos</option><option>//a[contains(text(),'Actividades y Proyectos')]</option><option>//a[@id='navbarDropdownActividades_y_Proyectos']</option><option>//div[@id='navbarSupportedContent']/ul/li[2]/a</option><option>xpath=(//a[contains(@href, '#')])[2]</option><option>//li[2]/a</option></datalist></td><td>106,25</td>
+<tr><td>clickAt</td><td>id=navbarDropdownAcciones_de_IAP<datalist><option>id=navbarDropdownAcciones_de_IAP</option><option>link=Acciones de IAP</option><option>css=#navbarDropdownAcciones_de_IAP</option><option>//a[contains(text(),'Acciones de IAP')]</option><option>//a[@id='navbarDropdownAcciones_de_IAP']</option><option>//div[@id='navbarSupportedContent']/ul/li[2]/a</option><option>xpath=(//a[contains(@href, '#')])[2]</option><option>//li[2]/a</option></datalist></td><td>66,33</td>
 </tr>
-<tr><td>clickAt</td><td>link=Listado de Actividades<datalist><option>link=Listado de Actividades</option><option>css=div.dropdown-menu.show &gt; a.dropdown-item</option><option>//a[contains(text(),'Listado de Actividades')]</option><option>//div[@id='navbarSupportedContent']/ul/li[2]/div/a</option><option>//a[contains(@href, '/iap/ensayo/actividades')]</option><option>//li[2]/div/a</option></datalist></td><td>123,8</td>
+<tr><td>clickAt</td><td>link=Acciones<datalist><option>link=Listado de Actividades</option><option>css=div.dropdown-menu.show &gt; a.dropdown-item</option><option>//a[contains(text(),'Listado de Actividades')]</option><option>//div[@id='navbarSupportedContent']/ul/li[2]/div/a</option><option>//a[contains(@href, '/iap/ensayo/actividades')]</option><option>//li[2]/div/a</option><option>link=Acciones</option></datalist></td><td>123,8</td>
 </tr>
 <tr><td>clickAt</td><td>id=filtro_busid<datalist><option>id=filtro_busid</option><option>name=filtro[busid]</option><option>css=#filtro_busid</option><option>//input[@id='filtro_busid']</option><option>//div/input</option></datalist></td><td>16,15</td>
 </tr>
@@ -127,7 +127,7 @@
 <tbody>
 <tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
 </tr>
-<tr><td>select</td><td>id=filtro_busresponsable<datalist><option>id=filtro_busresponsable</option><option>name=filtro[busresponsable]</option><option>css=#filtro_busresponsable</option><option>//select[@id='filtro_busresponsable']</option><option>//select</option></datalist></td><td>label=iap - iap</td>
+<tr><td>select</td><td>id=filtro_busresponsable<datalist><option>id=filtro_busresponsable</option><option>name=filtro[busresponsable]</option><option>css=#filtro_busresponsable</option><option>//select[@id='filtro_busresponsable']</option><option>//select</option></datalist></td><td>label=sivel2</td>
 </tr>
 <tr><td>clickAt</td><td>id=filtro_busresponsable<datalist><option>id=filtro_busresponsable</option><option>name=filtro[busresponsable]</option><option>css=#filtro_busresponsable</option><option>//select[@id='filtro_busresponsable']</option><option>//select</option></datalist></td><td>-537,-295</td>
 </tr>
@@ -151,7 +151,7 @@
 <tbody>
 <tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
 </tr>
-<tr><td>select</td><td>id=filtro_busproyectofinanciero<datalist><option>id=filtro_busproyectofinanciero</option><option>name=filtro[busproyectofinanciero]</option><option>css=#filtro_busproyectofinanciero</option><option>//select[@id='filtro_busproyectofinanciero']</option><option>//td[5]/div/select</option></datalist></td><td>label=PRM</td>
+<tr><td>select</td><td>id=filtro_busproyectofinanciero<datalist><option>id=filtro_busproyectofinanciero</option><option>name=filtro[busproyectofinanciero]</option><option>css=#filtro_busproyectofinanciero</option><option>//select[@id='filtro_busproyectofinanciero']</option><option>//td[5]/div/select</option></datalist></td><td>label=ACCIONES COMUNES DE IAP</td>
 </tr>
 <tr><td>clickAt</td><td>id=filtro_busproyectofinanciero<datalist><option>id=filtro_busproyectofinanciero</option><option>name=filtro[busproyectofinanciero]</option><option>css=#filtro_busproyectofinanciero</option><option>//select[@id='filtro_busproyectofinanciero']</option><option>//td[5]/div/select</option></datalist></td><td>-675,-295</td>
 </tr>
@@ -177,7 +177,11 @@
 <tbody>
 <tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
 </tr>
-<tr><td>select</td><td>id=filtro_busactividadpf<datalist><option>id=filtro_busactividadpf</option><option>name=filtro[busactividadpf]</option><option>css=#filtro_busactividadpf</option><option>//select[@id='filtro_busactividadpf']</option><option>//td[6]/div/select</option></datalist></td><td>label=OE1R2AR: ACTA DE REUNIÓN</td>
+<tr><td>select</td><td>id=filtro_busproyectofinanciero<datalist><option>id=filtro_busproyectofinanciero</option><option>name=filtro[busproyectofinanciero]</option><option>css=#filtro_busproyectofinanciero</option><option>//select[@id='filtro_busproyectofinanciero']</option><option>//td[5]/div/select</option></datalist></td><td>label=ACCIONES COMUNES DE IAP</td>
+</tr>
+<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
+</tr>
+<tr><td>select</td><td>id=filtro_busactividadpf<datalist><option>id=filtro_busactividadpf</option><option>name=filtro[busactividadpf]</option><option>css=#filtro_busactividadpf</option><option>//select[@id='filtro_busactividadpf']</option><option>//td[6]/div/select</option></datalist></td><td>label=MISIÓN.AAR: Acompañamiento a reuniones de incidencia conjunta con la organización acompañada</td>
 </tr>
 <tr><td>clickAt</td><td>id=filtro_busactividadpf<datalist><option>id=filtro_busactividadpf</option><option>name=filtro[busactividadpf]</option><option>css=#filtro_busactividadpf</option><option>//select[@id='filtro_busactividadpf']</option><option>//td[6]/div/select</option></datalist></td><td>-903,-277</td>
 </tr>

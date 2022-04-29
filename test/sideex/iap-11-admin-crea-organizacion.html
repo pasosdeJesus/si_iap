@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-	<title>iap-11-admin-crea-organizcion</title>
+	<title>iap-11-admin-crea-organizacion</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -11,11 +11,11 @@
 <tr><td rowspan="1" colspan="3">organizacion-nombre</td></tr>
 </thead>
 <tbody>
-<tr><td>clickAt</td><td>id=navbarDropdownZRC<datalist><option>id=navbarDropdownZRC</option><option>link=ZRC</option><option>css=#navbarDropdownZRC</option><option>xpath=(//a[contains(text(),'ZRC')])[2]</option><option>//a[@id='navbarDropdownZRC']</option><option>//div[@id='navbarSupportedContent']/ul/li[3]/a</option><option>xpath=(//a[contains(@href, '#')])[3]</option><option>//li[3]/a</option></datalist></td><td>18,15</td>
+<tr><td>clickAt</td><td>id=navbarDropdownDirectorio<datalist><option>id=navbarDropdownDirectorio</option><option>link=Directorio</option><option>css=#navbarDropdownDirectorio</option><option>//a[contains(text(),'Directorio')]</option><option>//a[@id='navbarDropdownDirectorio']</option><option>//div[@id='navbarSupportedContent']/ul/li[4]/a</option><option>xpath=(//a[contains(@href, '#')])[4]</option><option>//li[4]/a</option></datalist></td><td>54,29</td>
 </tr>
-<tr><td>clickAt</td><td>link=Organizaciones<datalist><option>link=Organizaciones</option><option>//a[contains(text(),'Organizaciones')]</option><option>//div[@id='navbarSupportedContent']/ul/li[3]/div/a[3]</option><option>//a[contains(@href, '/iap/ensayo/orgsociales')]</option><option>//li[3]/div/a[3]</option></datalist></td><td>68,20</td>
+<tr><td>clickAt</td><td>link=Instituciones civiles<datalist><option>link=Instituciones civiles</option><option>css=ul.dropdown-menu.dropdown-menu-light.show &gt; li &gt; a.dropdown-item</option><option>//a[contains(text(),'Instituciones civiles')]</option><option>//div[@id='navbarSupportedContent']/ul/li[4]/ul/li/a</option><option>//a[contains(@href, '/iap/miviap/orgsociales?filtro[bustipoorg_id]=3')]</option><option>//li[4]/ul/li/a</option></datalist></td><td>162,9</td>
 </tr>
-<tr><td>clickAt</td><td>link=Nuevo<datalist><option>link=Nuevo</option><option>css=a.btn.btn-primary</option><option>//a[contains(text(),'Nuevo')]</option><option>//a[contains(@href, '/iap/ensayo/orgsociales/nuevo')]</option><option>//div[2]/a</option></datalist></td><td>32,18</td>
+<tr><td>clickAt</td><td>link=Nueva<datalist><option>link=Nueva</option><option>css=a.btn.btn-primary</option><option>//a[contains(text(),'Nueva')]</option><option>//div[@id='div_contenido']/form/div[2]/div[2]/a</option><option>//a[contains(@href, '/iap/miviap/orgsociales/nueva.%23%3CSip::Orgsocial::ActiveRecord_Relation:0x00000b0ca28b3620%3E?filtro[bustipoorg_id]=3')]</option><option>//div[2]/a</option></datalist></td><td>32,18</td>
 </tr>
 <tr><td>clickAt</td><td>id=orgsocial_grupoper_attributes_nombre<datalist><option>id=orgsocial_grupoper_attributes_nombre</option><option>name=orgsocial[grupoper_attributes][nombre]</option><option>css=#orgsocial_grupoper_attributes_nombre</option><option>//input[@id='orgsocial_grupoper_attributes_nombre']</option><option>//form[@id='new_orgsocial']/div[3]/div[2]/input</option><option>//div[3]/div[2]/input</option></datalist></td><td>58,16</td>
 </tr>
@@ -23,7 +23,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='new_orgsocial']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>25,21</td>
 </tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//div[@id='div_contenido']/div[3]/h1</option><option>//h1</option></datalist></td><td>Institución civil</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -39,25 +39,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>37,29</td>
 </tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
-</tr>
-</tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">organizacion-nit</td></tr>
-</thead>
-<tbody>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/actividades/44/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>31,27</td>
-</tr>
-<tr><td>clickAt</td><td>id=orgsocial_nit<datalist><option>id=orgsocial_nit</option><option>name=orgsocial[nit]</option><option>css=#orgsocial_nit</option><option>//input[@id='orgsocial_nit']</option><option>//form[@id='edit_orgsocial_7']/div[7]/input</option><option>//div[7]/input</option></datalist></td><td>129,17</td>
-</tr>
-<tr><td>type</td><td>id=orgsocial_nit<datalist><option>id=orgsocial_nit</option><option>name=orgsocial[nit]</option><option>css=#orgsocial_nit</option><option>//input[@id='orgsocial_nit']</option><option>//form[@id='edit_orgsocial_7']/div[7]/input</option><option>//div[7]/input</option></datalist></td><td>345321</td>
-</tr>
-<tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>56,26</td>
-</tr>
-<tr><td>runScript</td><td>$('[type=number]').removeAttr('type')<datalist><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//div[@id='div_contenido']/div[3]/h1</option><option>//h1</option></datalist></td><td>Institución civil</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -73,7 +55,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>66,18</td>
 </tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//div[@id='div_contenido']/div[3]/h1</option><option>//h1</option></datalist></td><td>Institución civil</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -89,9 +71,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>71,16</td>
 </tr>
-<tr><td>runScript</td><td>$('[type=number]').removeAttr('type')<datalist><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//div[@id='div_contenido']/div[3]/h1</option><option>//h1</option></datalist></td><td>Institución civil</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -109,9 +89,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>61,12</td>
 </tr>
-<tr><td>runScript</td><td>$('[type=number]').removeAttr('type')<datalist><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//div[@id='div_contenido']/div[3]/h1</option><option>//h1</option></datalist></td><td>Institución civil</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -127,125 +105,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>72,23</td>
 </tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
-</tr>
-</tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">organizacion-zrc</td></tr>
-</thead>
-<tbody>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/actividades/44/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>31,27</td>
-</tr>
-<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
-</tr>
-<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
-</tr>
-<tr><td>select</td><td>id=orgsocial_zrc_id<datalist><option>id=orgsocial_zrc_id</option><option>name=orgsocial[zrc_id]</option><option>css=#orgsocial_zrc_id</option><option>//select[@id='orgsocial_zrc_id']</option><option>//form[@id='edit_orgsocial_10']/div[4]/select</option><option>//select</option></datalist></td><td>label=Cabrera</td>
-</tr>
-<tr><td>clickAt</td><td>id=orgsocial_zrc_id<datalist><option>id=orgsocial_zrc_id</option><option>name=orgsocial[zrc_id]</option><option>css=#orgsocial_zrc_id</option><option>//select[@id='orgsocial_zrc_id']</option><option>//form[@id='edit_orgsocial_10']/div[4]/select</option><option>//select</option></datalist></td><td>-18,-285</td>
-</tr>
-<tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>72,23</td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
-</tr>
-</tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">organizacion-nivel-de-organización</td></tr>
-</thead>
-<tbody>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/actividades/44/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>31,27</td>
-</tr>
-<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
-</tr>
-<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
-</tr>
-<tr><td>select</td><td>id=orgsocial_nivelorgiap_id<datalist><option>id=orgsocial_nivelorgiap_id</option><option>name=orgsocial[nivelorgiap_id]</option><option>css=#orgsocial_nivelorgiap_id</option><option>//select[@id='orgsocial_nivelorgiap_id']</option><option>//form[@id='edit_orgsocial_10']/div[5]/select</option><option>//div[5]/select</option></datalist></td><td>label=BASE</td>
-</tr>
-<tr><td>clickAt</td><td>id=orgsocial_nivelorgiap_id<datalist><option>id=orgsocial_nivelorgiap_id</option><option>name=orgsocial[nivelorgiap_id]</option><option>css=#orgsocial_nivelorgiap_id</option><option>//select[@id='orgsocial_nivelorgiap_id']</option><option>//form[@id='edit_orgsocial_10']/div[5]/select</option><option>//div[5]/select</option></datalist></td><td>-18,-355</td>
-</tr>
-<tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>78,23</td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
-</tr>
-</tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">organizacion-tipo-de-organización</td></tr>
-</thead>
-<tbody>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/orgsociales/7/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>49,21</td>
-</tr>
-<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
-</tr>
-<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
-</tr>
-<tr><td>select</td><td>id=orgsocial_tipoorgiap_id<datalist><option>id=orgsocial_tipoorgiap_id</option><option>name=orgsocial[tipoorgiap_id]</option><option>css=#orgsocial_tipoorgiap_id</option><option>//select[@id='orgsocial_tipoorgiap_id']</option><option>//form[@id='edit_orgsocial_10']/div[6]/select</option><option>//div[6]/select</option></datalist></td><td>label=SINDICAL</td>
-</tr>
-<tr><td>clickAt</td><td>id=orgsocial_tipoorgiap_id<datalist><option>id=orgsocial_tipoorgiap_id</option><option>name=orgsocial[tipoorgiap_id]</option><option>css=#orgsocial_tipoorgiap_id</option><option>//select[@id='orgsocial_tipoorgiap_id']</option><option>//form[@id='edit_orgsocial_10']/div[6]/select</option><option>//div[6]/select</option></datalist></td><td>-18,-425</td>
-</tr>
-<tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>57,23</td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
-</tr>
-</tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">organizacion-numero-de-asociados-hombres</td></tr>
-</thead>
-<tbody>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/actividades/44/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>31,27</td>
-</tr>
-<tr><td>runScript</td><td>$('[type=number]').removeAttr('type')<datalist><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
-</tr>
-<tr><td>runScript</td><td>$('[type=number]').removeAttr('type')<datalist><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
-</tr>
-<tr><td>clickAt</td><td>id=orgsocial_numasociados<datalist><option>id=orgsocial_numasociados</option><option>name=orgsocial[numasociados]</option><option>css=#orgsocial_numasociados</option><option>//input[@id='orgsocial_numasociados']</option><option>//form[@id='edit_orgsocial_10']/div[12]/input</option><option>//div[12]/input</option></datalist></td><td>97,9</td>
-</tr>
-<tr><td>type</td><td>id=orgsocial_numasociados<datalist><option>id=orgsocial_numasociados</option><option>name=orgsocial[numasociados]</option><option>css=#orgsocial_numasociados</option><option>//input[@id='orgsocial_numasociados']</option><option>//form[@id='edit_orgsocial_10']/div[12]/input</option><option>//div[12]/input</option></datalist></td><td>45</td>
-</tr>
-<tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>58,24</td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
-</tr>
-</tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">organizacion-numero-de-asociadas-mujeres</td></tr>
-</thead>
-<tbody>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/actividades/44/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>31,27</td>
-</tr>
-<tr><td>runScript</td><td>$('[type=number]').removeAttr('type')<datalist><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
-</tr>
-<tr><td>runScript</td><td>$('[type=number]').removeAttr('type')<datalist><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
-</tr>
-<tr><td>clickAt</td><td>id=orgsocial_numasociadas<datalist><option>id=orgsocial_numasociadas</option><option>name=orgsocial[numasociadas]</option><option>css=#orgsocial_numasociadas</option><option>//input[@id='orgsocial_numasociadas']</option><option>//form[@id='edit_orgsocial_10']/div[13]/input</option><option>//div[13]/input</option></datalist></td><td>117,19</td>
-</tr>
-<tr><td>type</td><td>id=orgsocial_numasociadas<datalist><option>id=orgsocial_numasociadas</option><option>name=orgsocial[numasociadas]</option><option>css=#orgsocial_numasociadas</option><option>//input[@id='orgsocial_numasociadas']</option><option>//form[@id='edit_orgsocial_10']/div[13]/input</option><option>//div[13]/input</option></datalist></td><td>30</td>
-</tr>
-<tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>59,22</td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
-</tr>
-</tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">organizacion-carpeta-en-nube</td></tr>
-</thead>
-<tbody>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/actividades/44/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>31,27</td>
-</tr>
-<tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
-</tr>
-<tr><td>select</td><td>id=orgsocial_carpeta<datalist><option>id=orgsocial_carpeta</option><option>name=orgsocial[carpeta]</option><option>css=#orgsocial_carpeta</option><option>//select[@id='orgsocial_carpeta']</option><option>//form[@id='edit_orgsocial_7']/div[14]/select</option><option>//div[14]/select</option></datalist></td><td>label=./Constituidas/ZRC Cabrera Cundinamarca/</td>
-</tr>
-<tr><td>clickAt</td><td>id=orgsocial_carpeta<datalist><option>id=orgsocial_carpeta</option><option>name=orgsocial[carpeta]</option><option>css=#orgsocial_carpeta</option><option>//select[@id='orgsocial_carpeta']</option><option>//form[@id='edit_orgsocial_7']/div[14]/select</option><option>//div[14]/select</option></datalist></td><td>-18,-416</td>
-</tr>
-<tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>78,17</td>
-</tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//div[@id='div_contenido']/div[3]/h1</option><option>//h1</option></datalist></td><td>Institución civil</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -255,9 +115,7 @@
 <tbody>
 <tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/actividades/44/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>31,27</td>
 </tr>
-<tr><td>clickAt</td><td>link=Editar<datalist><option>link=Editar</option><option>//a[contains(text(),'Editar')]</option><option>//a[contains(@href, '/iap/ensayo/orgsociales/7/edita')]</option><option>//div/div/a[2]</option></datalist></td><td>47,20</td>
-</tr>
-<tr><td>clickAt</td><td>link=Añadir Contacto<datalist><option>link=Añadir Contacto</option><option>css=a.btn-primary.add_fields</option><option>//a[contains(text(),'Añadir Contacto')]</option><option>//div[@id='orgsocial_persona_7']/div/a</option><option>xpath=(//a[contains(@href, '#')])[6]</option><option>//div[15]/div/a</option></datalist></td><td>74,13</td>
+<tr><td>clickAt</td><td>link=Añadir contacto<datalist><option>link=Añadir contacto</option><option>css=a.btn-primary.add_fields</option><option>//a[contains(text(),'Añadir contacto')]</option><option>//div[@id='orgsocial_persona_1']/div/a</option><option>xpath=(//a[contains(@href, '#')])[7]</option><option>//div[9]/div/a</option></datalist></td><td>74,13</td>
 </tr>
 <tr><td>clickAt</td><td>//td/div[2]/input<datalist><option>id=orgsocial_orgsocial_persona_attributes_1607568176180_persona_attributes_nombres</option><option>name=orgsocial[orgsocial_persona_attributes][1607568176180][persona_attributes][nombres]</option><option>css=#orgsocial_orgsocial_persona_attributes_1607568176180_persona_attributes_nombres</option><option>//input[@id='orgsocial_orgsocial_persona_attributes_1607568176180_persona_attributes_nombres']</option><option>//tbody[@id='orgsocial_persona']/tr/td/div[2]/input</option><option>//td/div[2]/input</option></datalist></td><td>93,24</td>
 </tr>
@@ -267,13 +125,7 @@
 </tr>
 <tr><td>type</td><td>//td[2]/div/input<datalist><option>id=orgsocial_orgsocial_persona_attributes_1607568176180_persona_attributes_apellidos</option><option>name=orgsocial[orgsocial_persona_attributes][1607568176180][persona_attributes][apellidos]</option><option>css=#orgsocial_orgsocial_persona_attributes_1607568176180_persona_attributes_apellidos</option><option>//input[@id='orgsocial_orgsocial_persona_attributes_1607568176180_persona_attributes_apellidos']</option><option>//tbody[@id='orgsocial_persona']/tr/td[2]/div/input</option><option>//td[2]/div/input</option></datalist></td><td>Pedraza</td>
 </tr>
-<tr><td>select</td><td>//td[3]/div/select<datalist><option>id=orgsocial_orgsocial_persona_attributes_1607568176180_perfilorgsocial_id</option><option>name=orgsocial[orgsocial_persona_attributes][1607568176180][perfilorgsocial_id]</option><option>css=#orgsocial_orgsocial_persona_attributes_1607568176180_perfilorgsocial_id</option><option>//select[@id='orgsocial_orgsocial_persona_attributes_1607568176180_perfilorgsocial_id']</option><option>//tbody[@id='orgsocial_persona']/tr/td[3]/div/select</option><option>//td[3]/div/select</option></datalist></td><td>label=REPRESENTANTE</td>
-</tr>
-<tr><td>clickAt</td><td>//td[3]/div/select<datalist><option>id=orgsocial_orgsocial_persona_attributes_1607568176180_perfilorgsocial_id</option><option>name=orgsocial[orgsocial_persona_attributes][1607568176180][perfilorgsocial_id]</option><option>css=#orgsocial_orgsocial_persona_attributes_1607568176180_perfilorgsocial_id</option><option>//select[@id='orgsocial_orgsocial_persona_attributes_1607568176180_perfilorgsocial_id']</option><option>//tbody[@id='orgsocial_persona']/tr/td[3]/div/select</option><option>//td[3]/div/select</option></datalist></td><td>-600,-452</td>
-</tr>
-<tr><td>clickAt</td><td>//td[4]/div/input<datalist><option>id=orgsocial_orgsocial_persona_attributes_1607568176180_correo</option><option>name=orgsocial[orgsocial_persona_attributes][1607568176180][correo]</option><option>css=#orgsocial_orgsocial_persona_attributes_1607568176180_correo</option><option>//input[@id='orgsocial_orgsocial_persona_attributes_1607568176180_correo']</option><option>//tbody[@id='orgsocial_persona']/tr/td[4]/div/input</option><option>//td[4]/div/input</option></datalist></td><td>85,12</td>
-</tr>
-<tr><td>type</td><td>//td[4]/div/input<datalist><option>id=orgsocial_orgsocial_persona_attributes_1607568176180_correo</option><option>name=orgsocial[orgsocial_persona_attributes][1607568176180][correo]</option><option>css=#orgsocial_orgsocial_persona_attributes_1607568176180_correo</option><option>//input[@id='orgsocial_orgsocial_persona_attributes_1607568176180_correo']</option><option>//tbody[@id='orgsocial_persona']/tr/td[4]/div/input</option><option>//td[4]/div/input</option></datalist></td><td>antonio@an.org</td>
+<tr><td>type</td><td>//td[6]/div/input<datalist><option>id=orgsocial_orgsocial_persona_attributes_1651244105841_correo</option><option>name=orgsocial[orgsocial_persona_attributes][1651244105841][correo]</option><option>css=#orgsocial_orgsocial_persona_attributes_1651244105841_correo</option><option>//input[@id='orgsocial_orgsocial_persona_attributes_1651244105841_correo']</option><option>//tbody[@id='orgsocial_persona']/tr/td[6]/div/input</option><option>//td[6]/div/input</option></datalist></td><td>antonio@an.org</td>
 </tr>
 <tr><td>clickAt</td><td>name=commit<datalist><option>name=commit</option><option>css=input[name="commit"]</option><option>//input[@name='commit']</option><option>//form[@id='edit_orgsocial_7']/div[17]/input</option><option>//div[17]/input</option></datalist></td><td>65,20</td>
 </tr>
@@ -281,7 +133,7 @@
 </tr>
 <tr><td>runScript</td><td>$('[type=email]').removeAttr('type')<datalist><option>$('[type=email]').removeAttr('type')</option><option>$('[type=number]').removeAttr('type')</option><option>$('#rangoedad_limiteinferior').removeAttr('type')</option><option>$('#pais_codiso').removeAttr('type')</option></datalist></td><td></td>
 </tr>
-<tr><td>clickAt</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organización</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//div[@id='div_contenido']/div[3]/h1</option><option>//h1</option></datalist></td><td>Institución civil</td>
 </tr>
 </tbody></table>
 </body>

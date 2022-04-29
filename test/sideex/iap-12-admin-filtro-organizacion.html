@@ -11,11 +11,9 @@
 <tr><td rowspan="1" colspan="3">organizacion-filtro-id</td></tr>
 </thead>
 <tbody>
-<tr><td>clickAt</td><td>id=navbarDropdownActividades_y_Proyectos<datalist><option>id=navbarDropdownActividades_y_Proyectos</option><option>link=Actividades y Proyectos</option><option>css=#navbarDropdownActividades_y_Proyectos</option><option>//a[contains(text(),'Actividades y Proyectos')]</option><option>//a[@id='navbarDropdownActividades_y_Proyectos']</option><option>//div[@id='navbarSupportedContent']/ul/li[2]/a</option><option>xpath=(//a[contains(@href, '#')])[2]</option><option>//li[2]/a</option></datalist></td><td>87,24</td>
+<tr><td>clickAt</td><td>id=navbarDropdownDirectorio<datalist><option>id=navbarDropdownDirectorio</option><option>link=Directorio</option><option>css=#navbarDropdownDirectorio</option><option>//a[contains(text(),'Directorio')]</option><option>//a[@id='navbarDropdownDirectorio']</option><option>//div[@id='navbarSupportedContent']/ul/li[4]/a</option><option>xpath=(//a[contains(@href, '#')])[4]</option><option>//li[4]/a</option></datalist></td><td>54,29</td>
 </tr>
-<tr><td>clickAt</td><td>id=navbarDropdownZRC<datalist><option>id=navbarDropdownZRC</option><option>link=ZRC</option><option>css=#navbarDropdownZRC</option><option>xpath=(//a[contains(text(),'ZRC')])[2]</option><option>//a[@id='navbarDropdownZRC']</option><option>//div[@id='navbarSupportedContent']/ul/li[3]/a</option><option>xpath=(//a[contains(@href, '#')])[3]</option><option>//li[3]/a</option></datalist></td><td>29,19</td>
-</tr>
-<tr><td>clickAt</td><td>link=Organizaciones<datalist><option>link=Organizaciones</option><option>//a[contains(text(),'Organizaciones')]</option><option>//div[@id='navbarSupportedContent']/ul/li[3]/div/a[3]</option><option>//a[contains(@href, '/iap/ensayo/orgsociales')]</option><option>//li[3]/div/a[3]</option></datalist></td><td>80,16</td>
+<tr><td>clickAt</td><td>link=Instituciones civiles<datalist><option>link=Instituciones civiles</option><option>css=ul.dropdown-menu.dropdown-menu-light.show &gt; li &gt; a.dropdown-item</option><option>//a[contains(text(),'Instituciones civiles')]</option><option>//div[@id='navbarSupportedContent']/ul/li[4]/ul/li/a</option><option>//a[contains(@href, '/iap/miviap/orgsociales?filtro[bustipoorg_id]=3')]</option><option>//li[4]/ul/li/a</option></datalist></td><td>162,9</td>
 </tr>
 <tr><td>clickAt</td><td>id=filtro_busid<datalist><option>id=filtro_busid</option><option>name=filtro[busid]</option><option>css=#filtro_busid</option><option>//input[@id='filtro_busid']</option><option>//input</option></datalist></td><td>45,12</td>
 </tr>
@@ -23,13 +21,11 @@
 </tr>
 <tr><td>clickAt</td><td>name=filtrar<datalist><option>name=filtrar</option><option>css=input[name="filtrar"]</option><option>//input[@name='filtrar']</option><option>//td[16]/input</option></datalist></td><td>36,9</td>
 </tr>
-<tr><td>clickAt</td><td>css=div.input.integer.required.filtro_busid<datalist><option>css=div.input.integer.required.filtro_busid</option><option>//td/div</option></datalist></td><td>2,20</td>
-</tr>
 <tr><td>type</td><td>id=filtro_busid<datalist><option>id=filtro_busid</option><option>name=filtro[busid]</option><option>css=#filtro_busid</option><option>//input[@id='filtro_busid']</option><option>//input</option></datalist></td><td></td>
 </tr>
 <tr><td>clickAt</td><td>name=filtrar<datalist><option>name=filtrar</option><option>css=input[name="filtrar"]</option><option>//input[@name='filtrar']</option><option>//td[16]/input</option></datalist></td><td>40,17</td>
 </tr>
-<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organizaciones</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Instituciones civiles</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -39,11 +35,13 @@
 <tbody>
 <tr><td>runScript</td><td>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')<datalist><option>$('.chosen-select').removeAttr('style'); $('.chosen-container').remove(); $('.chosen-select').removeClass('chosen-select')</option></datalist></td><td></td>
 </tr>
-<tr><td>select</td><td>id=filtro_busgrupoper_id<datalist><option>id=filtro_busgrupoper_id</option><option>name=filtro[busgrupoper_id]</option><option>css=#filtro_busgrupoper_id</option><option>//select[@id='filtro_busgrupoper_id']</option><option>//select</option></datalist></td><td>label=ACVC</td>
+<tr><td>select</td><td>id=filtro_busgrupoper_id<datalist><option>id=filtro_busgrupoper_id</option><option>name=filtro[busgrupoper_id]</option><option>css=#filtro_busgrupoper_id</option><option>//select[@id='filtro_busgrupoper_id']</option><option>//select</option></datalist></td><td>label=aaa</td>
 </tr>
 <tr><td>clickAt</td><td>id=filtro_busgrupoper_id<datalist><option>id=filtro_busgrupoper_id</option><option>name=filtro[busgrupoper_id]</option><option>css=#filtro_busgrupoper_id</option><option>//select[@id='filtro_busgrupoper_id']</option><option>//select</option></datalist></td><td>-124,-313</td>
 </tr>
 <tr><td>clickAt</td><td>name=filtrar<datalist><option>name=filtrar</option><option>css=input[name="filtrar"]</option><option>//input[@name='filtrar']</option><option>//td[16]/input</option></datalist></td><td>41,13</td>
+</tr>
+<tr><td>assertText</td><td>id=numregistros<datalist><option>id=numregistros</option><option>css=#numregistros</option><option>//span[@id='numregistros']</option><option>//div[@id='div_contenido']/form/div/div[2]/span</option><option>//div[2]/span</option></datalist></td><td>1</td>
 </tr>
 <tr><td>mouseDownAt</td><td>css=abbr.search-choice-close<datalist><option>css=abbr.search-choice-close</option><option>//div[@id='filtro_busresponsable_chosen']/a/abbr</option><option>//abbr</option></datalist></td><td>7.5,4</td>
 </tr>
@@ -53,7 +51,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=filtrar<datalist><option>name=filtrar</option><option>css=input[name="filtrar"]</option><option>//input[@name='filtrar']</option><option>//td[16]/input</option></datalist></td><td>26,21</td>
 </tr>
-<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organizaciones</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Instituciones civiles</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -81,7 +79,7 @@
 </tr>
 <tr><td>clickAt</td><td>name=filtrar<datalist><option>name=filtrar</option><option>css=input[name="filtrar"]</option><option>//input[@name='filtrar']</option><option>//td[11]/input</option></datalist></td><td>31,20</td>
 </tr>
-<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Organizaciones</td>
+<tr><td>assertText</td><td>css=h1<datalist><option>css=h1</option><option>//h1</option></datalist></td><td>Instituciones civiles</td>
 </tr>
 </tbody></table>
 </body>
