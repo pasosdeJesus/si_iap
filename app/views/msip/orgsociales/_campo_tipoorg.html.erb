@@ -1,0 +1,16 @@
+<% if params && params[:filtro] && params[:filtro][:bustipoorg_id] %>
+  <% s = params[:filtro][:bustipoorg_id].to_i %>
+<% elsif @registro.tipoorg %>
+  <% s = @registro.tipoorg.id %>
+<% else %>
+  <% s = 2 %>
+<% end %>
+<%= f.association :tipoorg,
+  collection: Msip::Tipoorg.habilitados.order(:nombre),
+  label_method: :presenta_nombre,
+  value_method: :id,
+  selected: s,
+  input_html: {
+    class: 'chosen-select',
+  }
+%>

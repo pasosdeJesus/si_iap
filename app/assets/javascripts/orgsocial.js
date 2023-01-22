@@ -14,7 +14,7 @@ function siiap_registra_orgsocial(root) {
         departamento_id: null,
         municipio_id: mun
       }
-      sip_funcion_tras_AJAX('regiones/de_depmun', params, 
+      msip_funcion_tras_AJAX('regiones/de_depmun', params, 
         siiap_actualiza_region_orgsocial, 
         'No pudo obtener region del municipio.')
     });

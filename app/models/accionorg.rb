@@ -1,9 +1,9 @@
 class Accionorg < ActiveRecord::Base
-	include Sip::Modelo
-  include Sip::Localizacion
+	include Msip::Modelo
+  include Msip::Localizacion
 
   has_and_belongs_to_many :orgsocial,
-    class_name: 'Sip::Orgsocial',
+    class_name: 'Msip::Orgsocial',
     foreign_key: 'accionorg_id',
     association_foreign_key: 'orgsocial_id',
     join_table: 'accionorg_orgsocial'
@@ -16,7 +16,7 @@ class Accionorg < ActiveRecord::Base
     allow_destroy: true, reject_if: :all_blank
 
   has_and_belongs_to_many :anexo,
-    class_name: 'Sip::Orgsocial',
+    class_name: 'Msip::Orgsocial',
     foreign_key: 'accionorg_id',
     association_foreign_key: 'orgsocial_id',
     join_table: 'accionorg_orgsocial'

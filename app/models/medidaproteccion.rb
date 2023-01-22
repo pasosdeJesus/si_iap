@@ -1,7 +1,7 @@
 class Medidaproteccion < ActiveRecord::Base
-  include Sip::Basica
+  include Msip::Basica
 
   has_many :orgsocial, foreign_key: 'medidaproteccion_id', validate: true,
-    class_name: 'Sip::Orgsocial'
+    class_name: 'Msip::Orgsocial'
 
 end

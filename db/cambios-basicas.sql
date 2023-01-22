@@ -32,13 +32,13 @@ INSERT INTO public.cor1440_gen_actividadpf (id, proyectofinanciero_id, nombrecor
 INSERT INTO public.cor1440_gen_actividadpf (id, proyectofinanciero_id, nombrecorto, titulo, descripcion, resultadopf_id, actividadtipo_id, formulario_id, heredade_id) VALUES (109, 106, 'IP', 'Incidencia política de urgencia de manera telefónica ', '', 108, NULL, NULL, NULL);
 
 
-UPDATE public.sip_tipoorg set nombre='ORGANIZACIÓN ACOMPAÑADA' 
+UPDATE public.msip_tipoorg set nombre='ORGANIZACIÓN ACOMPAÑADA' 
   WHERE id = 1;
-UPDATE public.sip_tipoorg set nombre='ORGANIZACIÓN (NO ACOMPAÑADA)' 
+UPDATE public.msip_tipoorg set nombre='ORGANIZACIÓN (NO ACOMPAÑADA)' 
   WHERE id = 2;
-UPDATE public.sip_tipoorg set nombre='INSTITUCIÓN CIVIL'
+UPDATE public.msip_tipoorg set nombre='INSTITUCIÓN CIVIL'
   WHERE id = 3;
-INSERT INTO public.sip_tipoorg (id, nombre, 
+INSERT INTO public.msip_tipoorg (id, nombre, 
   fechacreacion, created_at, updated_at) VALUES (
   4, 'FUERZA PÚBLICA',
   '2020-08-05', '2020-08-05', '2020-08-05');

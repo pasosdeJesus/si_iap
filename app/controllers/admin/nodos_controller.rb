@@ -1,5 +1,5 @@
 module Admin
-  class NodosController < Sip::Admin::BasicasController
+  class NodosController < Msip::Admin::BasicasController
     before_action :set_nodo, 
       only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource  class: ::Nodo

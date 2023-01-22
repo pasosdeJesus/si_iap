@@ -1,6 +1,6 @@
 <% if defined?(registro) && defined?(tipoorg) && 
     registro.region && registro.fechaini && registro.fechafin %>
-  <% os = Sip::Orgsocial.where(
+  <% os = Msip::Orgsocial.where(
     'region_de_orgsocial(id)=?', 
     registro.region_id).where(tipoorg_id: tipoorg) %>
 
@@ -12,7 +12,7 @@
       <% os.each do |o| %>
         <tr>
           <td>
-            <%= link_to o.id, sip.orgsocial_path(o.id), target: '_blank' %>
+            <%= link_to o.id, msip.orgsocial_path(o.id), target: '_blank' %>
           </td>
           <td><%= o.presenta_nombre %></td>
         </tr>

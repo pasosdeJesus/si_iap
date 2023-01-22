@@ -1,5 +1,5 @@
 module Admin
-  class GradosimpactoController < Sip::Admin::BasicasController
+  class GradosimpactoController < Msip::Admin::BasicasController
     before_action :set_gradoimpacto, 
       only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource  class: ::Gradoimpacto

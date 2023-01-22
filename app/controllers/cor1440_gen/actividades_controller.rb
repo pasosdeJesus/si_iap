@@ -13,7 +13,7 @@ module Cor1440Gen
     def update
       # Procesar ubicacionespre de migración
       if actividad_params[:ubicacionpre_pais_id] && actividad_params[:ubicacionpre_pais_id] != ''
-        @registro.ubicacionpre_id = Sip::Ubicacionpre::buscar_o_agregar(
+        @registro.ubicacionpre_id = Msip::Ubicacionpre::buscar_o_agregar(
           actividad_params[:ubicacionpre_pais_id], 
           actividad_params[:ubicacionpre_departamento_id],
           actividad_params[:ubicacionpre_municipio_id], 

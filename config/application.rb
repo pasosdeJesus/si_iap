@@ -37,7 +37,7 @@ module Cor1440
 
     config.relative_url_root = ENV.fetch('RUTA_RELATIVA', '/iap/miviap')
 
-    # sip
+    # msip
     config.x.formato_fecha = ENV.fetch('FORMATO_FECHA', 'dd/M/yyyy')
 
     # heb412

@@ -1,5 +1,5 @@
 module Admin
-  class MedidasproteccionController < Sip::Admin::BasicasController
+  class MedidasproteccionController < Msip::Admin::BasicasController
     before_action :set_medidaproteccion, 
       only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource  class: ::Medidaproteccion

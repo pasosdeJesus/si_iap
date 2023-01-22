@@ -7,9 +7,9 @@ function leerCapasSuperpuestas(){
 function agregarCapasNZ() {
   var root = window;
   if (typeof root.puntomontaje == "undefined") {
-    sip_prepara_eventos_comunes(root, false, false);
+    msip_prepara_eventos_comunes(root, false, false);
   }
-  sip_arregla_puntomontaje(root)
+  msip_arregla_puntomontaje(root)
   $.getJSON(root.puntomontaje + "admin/nodos.json", obtenerNodos)
   function obtenerNodos(datos){
     var geoNodos = [] 

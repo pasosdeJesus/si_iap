@@ -1,0 +1,21 @@
+<% estmostrar = '' %>
+<% if defined?(@registro) && @registro.class.to_s == 'Msip::Orgsocial' %>
+  <% estmostrar = 'display: none' %>
+  <% if @registro.tipoorg && 
+      (@registro.tipoorg_id == 1 || @registro.tipoorg_id == 2) %>
+    <% estmostrar = '' %>
+  <% end %>
+<% end %>
+<div class="input string estorganizacion" style="<%= estmostrar %>" >
+  <label class="string control-label">Casos en los que aparece: </label>
+  <% r = "" %>
+  <% sep = "" %>
+  <% v = Sivel2Gen::Victimacolectiva.where(id_grupoper: f.object.id).
+    order(:id_grupoper) %>
+  <% v.each do |vic| %>
+    <% if @caso.id != vic.caso.id %>
+           <%= link_to(vic.caso.id, sivel2_gen.caso_path(vic.caso), 
+                       target:"_blank") %> 
+    <% end %>
+  <% end %>
+</div>

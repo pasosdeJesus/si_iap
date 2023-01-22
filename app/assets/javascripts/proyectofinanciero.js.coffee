@@ -8,7 +8,7 @@
     fechacierre_localizada: $('#proyectofinanciero_fechacierre_localizada').val()
   }
   if datos.fechainicio_localizada != '' && datos.fechacierre_localizada != ''
-    sip_ajax_recibe_json(window, 'api/cor1440gen/duracion',
+    msip_ajax_recibe_json(window, 'api/cor1440gen/duracion',
       datos, establece_duracion)
   else
     $('#proyectofinanciero_duracion').val('')
@@ -30,7 +30,7 @@ $(document).on('change', '#proyectofinanciero_fechacierre_localizada', (e) ->
 )
 
 $(document).on('change', '#proyectofinanciero_estado', (e) ->
-  sip_enviarautomatico_formulario_y_repinta($('form').attr('id'), 
+  msip_enviarautomatico_formulario_y_repinta($('form').attr('id'), 
     ['recursoseconomicos'], 'POST', false)
 )
 

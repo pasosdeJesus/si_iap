@@ -8,7 +8,7 @@ class CasoconjsTest < ApplicationSystemTestCase
     Capybara.current_driver = Capybara.javascript_driver
     # Error:
     #  CasoconjsTest#test_administrador_crea:
-    # CanCan::AccessDenied: No está autorizado para read sip/departamento/active record relation.
+    # CanCan::AccessDenied: No está autorizado para read msip/departamento/active record relation.
     @usuario = Usuario.find_by(nusuario: 'sivel2')
     @usuario.password = 'sivel2'
     visit File.join(Rails.configuration.relative_url_root, '/usuarios/sign_in')

@@ -43,7 +43,7 @@ function siiap_actualiza_region() {
     departamento_id: dep,
     municipio_id: mun
   }
-  sip_funcion_tras_AJAX('regiones/de_depmun', params, 
+  msip_funcion_tras_AJAX('regiones/de_depmun', params, 
     siiap_actualiza_region_retrollamada, 
     'No pudo obtener region del departamento y municipio.')
 }
@@ -72,8 +72,8 @@ promesaRecursosSprocketsYDocumento.then((mensaje) => {
   console.log(mensaje)
   var root = window;
 
-  sip_prepara_eventos_comunes(root, false, false);
-  sip_ubicacionpre_expandible_registra('actividad_', 'ubicacionpre', root,
+  msip_prepara_eventos_comunes(root, false, false);
+  msip_ubicacionpre_expandible_registra('actividad_', 'ubicacionpre', root,
     siiap_actualiza_region, siiap_actualiza_region);
   mr519_gen_prepara_eventos_comunes(root);
   heb412_gen_prepara_eventos_comunes(root);
@@ -94,7 +94,7 @@ document.addEventListener('turbo:load', (e) => {
   
   console.log('Escuchador turbo:load')
 
-  sip_ejecutarAlCargarPagina(window)
+  msip_ejecutarAlCargarPagina(window)
 })
 
 import "./controllers"

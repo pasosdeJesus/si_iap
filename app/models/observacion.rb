@@ -1,5 +1,5 @@
 class Observacion < ActiveRecord::Base
-  include Sip::Modelo
+  include Msip::Modelo
 
    has_and_belongs_to_many :usuarionotificar, 
     class_name: 'Usuario',

@@ -97,7 +97,7 @@ es:
       "redyalianza": 
         Redyalianza: Red / Alianza
         Redesyalianzas: Redes y Alianzas
-      "sip/orgsocial":
+      "msip/orgsocial":
         acompanada: Acompañada por IAP
         carpeta: Carpeta en nube
         medidaproteccion: Medida de proteción y/o seguridad
@@ -118,7 +118,7 @@ es:
       "tipoorganzorc": 
         Tipoorganzorc: Tipo de organización formal privada
         Tiposorganzorc: Tipos de organización formal privada
-      "sip/tipoorg": 
+      "msip/tipoorg": 
         Tipoorg: Tipo de organización
         Tiposorg: Tipos de organización
       "usuario":

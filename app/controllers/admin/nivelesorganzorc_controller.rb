@@ -1,5 +1,5 @@
 module Admin
-  class NivelesorganzorcController < Sip::Admin::BasicasController
+  class NivelesorganzorcController < Msip::Admin::BasicasController
     before_action :set_nivelorganzorc, 
       only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource  class: ::Nivelorganzorc

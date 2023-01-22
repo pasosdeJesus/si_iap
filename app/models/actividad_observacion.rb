@@ -1,5 +1,5 @@
 class ActividadObservacion < ActiveRecord::Base
-  include Sip::Modelo 
+  include Msip::Modelo 
 
   belongs_to :actividad, class_name: 'Cor1440Gen::Actividad',
     validate: true, foreign_key: 'actividad_id', optional: false

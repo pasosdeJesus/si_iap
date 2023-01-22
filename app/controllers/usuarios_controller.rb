@@ -1,7 +1,7 @@
-require 'sip/concerns/controllers/usuarios_controller'
+require 'msip/concerns/controllers/usuarios_controller'
 
-class UsuariosController < Sip::ModelosController
-  include Sip::Concerns::Controllers::UsuariosController
+class UsuariosController < Msip::ModelosController
+  include Msip::Concerns::Controllers::UsuariosController
 
   # Sin autorización
   
@@ -16,8 +16,8 @@ class UsuariosController < Sip::ModelosController
       :email,
       :tema
     ]
-    if can?(:manage, Sip::Grupo)
-      r += [:sip_grupo]
+    if can?(:manage, Msip::Grupo)
+      r += [:msip_grupo]
     end
     r += [
       :idioma,
@@ -42,7 +42,7 @@ class UsuariosController < Sip::ModelosController
       :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip, 
       :failed_attempts, :unlock_token, :locked_at,
       :last_sign_in_ip, :etiqueta_ids => [],
-      :sip_grupo_ids => []
+      :grupo_ids => []
     )
     return p
   end

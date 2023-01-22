@@ -1,4 +1,4 @@
 class Zrc < ActiveRecord::Base
-  include Sip::Basica
+  include Msip::Basica
   belongs_to :estadozrc, optional: true
 end

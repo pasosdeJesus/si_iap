@@ -1,0 +1,14 @@
+<%= f.input :bustipoorg_id, 
+  as: :hidden,
+  input_html: {
+    value: params && params[:filtro] && params[:filtro][:bustipoorg_id] ? 
+      params[:filtro][:bustipoorg_id] : nil
+  } 
+%>
+<%= f.button :submit, 
+  name: 'filtrar',
+  value: "Filtrar", 
+  class: 'envia_filtrar btn-primary',
+  "data-disable-with" => 'Filtrar',
+  'data-turbo' => false
+%>

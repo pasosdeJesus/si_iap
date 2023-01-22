@@ -1,0 +1,12 @@
+<% estmostrar = 'display: none' %>
+<% if f.object && f.object.tipoorg && 
+    (f.object.tipoorg_id == 1 || f.object.tipoorg_id == 2) %>
+  <% estmostrar = '' %>
+<% end %>
+<%= render partial: 'msip/modelos/msip_campo_aut', 
+  locals: {
+    f: f, 
+    atr: :medidaproteccion, 
+    htmlexterno: {class: 'estorganizacion', style: estmostrar} 
+  } 
+%>

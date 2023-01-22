@@ -1,6 +1,6 @@
 class Coyonturaregional < ActiveRecord::Base
-	include Sip::Modelo
-  include Sip::Localizacion
+	include Msip::Modelo
+  include Msip::Localizacion
 
   belongs_to :region, class_name: 'Sivel2Gen::Region', 
     foreign_key: 'region_id', optional: false

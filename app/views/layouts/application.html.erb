@@ -1,5 +1,5 @@
 <% content_for :titulo do %>
-  <%= Sip.titulo %>
+  <%= Msip.titulo %>
 <% end %>
 
 <% content_for :menu do %>
@@ -30,7 +30,7 @@
         <%= opcion_menu "Árbol de presuntos responsables",
           sivel2_gen.arbol_presponsables_path, desplegable: true %>
         <%= opcion_menu 'Personas y/o víctimas', 
-          sip.personas_path, desplegable: true %>
+          msip.personas_path, desplegable: true %>
       <% end %>
       <%= despliega_abajo 'Acciones de IAP' do %>
         <%= opcion_menu 'Acciones', cor1440_gen.actividades_path,
@@ -48,12 +48,12 @@
       <% end %>
       <%= despliega_abajo 'Coyontura regional' do %>
         <%= opcion_menu 'Organizaciones acompañadas', 
-          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=1",
+          "#{msip.orgsociales_path}?filtro[bustipoorg_id]=1",
           desplegable: true %>
         <%= opcion_menu 'Acciones de organizaciones', 
           main_app.accionesorg_path, desplegable: true %>
         <%= opcion_menu 'Organizaciones (no acompañadas)',
-          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=2",
+          "#{msip.orgsociales_path}?filtro[bustipoorg_id]=2",
           desplegable: true %>
         <%= opcion_menu 'Coyunturas regionales', main_app.coyonturasregionales_path,
           desplegable: true %>
@@ -62,13 +62,13 @@
       <% end %>
       <%= despliega_abajo 'Directorio' do %>
         <%= opcion_menu 'Instituciones civiles', 
-          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=3",
+          "#{msip.orgsociales_path}?filtro[bustipoorg_id]=3",
           desplegable: true %>
         <%= opcion_menu 'Fuerza Pública',
-          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=4",
+          "#{msip.orgsociales_path}?filtro[bustipoorg_id]=4",
           desplegable: true %>
         <%= opcion_menu 'Organismos internacionales',
-          "#{sip.orgsociales_path}?filtro[bustipoorg_id]=5",
+          "#{msip.orgsociales_path}?filtro[bustipoorg_id]=5",
           desplegable: true %>
       <% end %>
     <% end %>
@@ -117,7 +117,7 @@
             desplegable: true %>
           <%= opcion_menu 'Tablas Básicas', sivel2_gen.tablasbasicas_path,
             desplegable: true %>
-          <%= opcion_menu 'Respaldo cifrado', sip.respaldo7z_path,
+          <%= opcion_menu 'Respaldo cifrado', msip.respaldo7z_path,
             desplegable: true %>
         <% end %>
       <% end %>
@@ -140,4 +140,4 @@
   </span></p>
 <% end %>
 
-<%= render template: 'layouts/sip/application' %>
+<%= render template: 'layouts/msip/application' %>

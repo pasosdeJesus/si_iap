@@ -1,5 +1,5 @@
 module Admin
-  class EstadoszrcController < Sip::Admin::BasicasController
+  class EstadoszrcController < Msip::Admin::BasicasController
     before_action :set_estadozrc, 
       only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource  class: ::Estadozrc

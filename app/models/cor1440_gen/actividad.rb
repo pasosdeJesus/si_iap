@@ -1,12 +1,12 @@
 require 'cor1440_gen/concerns/models/actividad'
-require 'sip/accesores_ubicacionpre'
+require 'msip/accesores_ubicacionpre'
 
 module Cor1440Gen
   class Actividad < ActiveRecord::Base
     include Cor1440Gen::Concerns::Models::Actividad
-    include Sip::Localizacion
+    include Msip::Localizacion
 
-    extend Sip::AccesoresUbicacionpre
+    extend Msip::AccesoresUbicacionpre
 
     accesores_ubicacionpre :ubicacionpre
     flotante_localizado :ubicacionpre_latitud
@@ -21,12 +21,12 @@ module Cor1440Gen
 
     belongs_to :gradoimpacto, optional: true
 
-    belongs_to :ubicacionpre, class_name: '::Sip::Ubicacionpre',
+    belongs_to :ubicacionpre, class_name: '::Msip::Ubicacionpre',
       foreign_key: 'ubicacionpre_id', optional: true
 
 
     has_and_belongs_to_many :etiqueta, 
-      class_name: 'Sip::Etiqueta',
+      class_name: 'Msip::Etiqueta',
       foreign_key: 'actividad_id',
       association_foreign_key: 'etiqueta_id',
       join_table: 'cor1440_gen_actividad_etiqueta'

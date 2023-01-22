@@ -1,8 +1,0 @@
-<% estmostrar = 'display: none' %>
-<% if f.object.tipoorg_id == 1 || f.object.tipoorg_id == 2 %>
-  <% estmostrar = '' %>
-<% end %>
-<%= render partial: 'sip/modelos/sip_campo_aut', 
-  locals: {f: f, atr: :tipoorganzorc, 
-           htmlexterno: {class: 'estorganizacion', style: estmostrar} 
-  } %>

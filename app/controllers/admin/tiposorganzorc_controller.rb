@@ -1,5 +1,5 @@
 module Admin
-  class TiposorganzorcController < Sip::Admin::BasicasController
+  class TiposorganzorcController < Msip::Admin::BasicasController
     before_action :set_tipoorganzorc, 
       only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource  class: ::Tipoorganzorc
