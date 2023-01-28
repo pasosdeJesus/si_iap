@@ -40,3 +40,4 @@ app/javascript/controllers/sivel2_gen
 app/javascript/controllers/sip
 cobertura-sistema/
 cobertura-unitarias/
+app/views/msip/hogar/_local.html.erb
