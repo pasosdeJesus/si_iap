@@ -123,7 +123,7 @@ group :test do
 
   gem 'selenium-webdriver'
 
-  gem 'simplecov', '<0.18' # Debido a https://github.com/codeclimate/test-reporter/issues/418
+  gem 'simplecov'
 
   gem 'spring' # Acelera ejecutando en fondo.  
 end
